@@ -277,7 +277,11 @@ class Pipeline:
                 if nat.get("confirmed"):
                     art["masks"][c.claim_id] = (nat["mask_crop"], nat["crop_box"][:2], 1.0)
                 else:
-                    art["masks"][c.claim_id] = (r["mask_analysis"], r["mask_origin_analysis"], low["scale"])
+                    # `mask_analysis` and its origin are in the downsampled analysis frame.
+                    # Store the origin in original-A coordinates; report/evaluation rescale only
+                    # the mask itself.  This avoids a systematic offset on large images.
+                    ox, oy = r["mask_origin_analysis"]
+                    art["masks"][c.claim_id] = (r["mask_analysis"], [ox / low["scale"], oy / low["scale"]], low["scale"])
                 break
 
         # ---- H: calibration ----

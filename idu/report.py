@@ -230,7 +230,9 @@ def export(result, art, claims, out_dir):
         full = np.zeros(art["img_a"].shape[:2], np.uint8)
         if scale != 1.0:
             mask = cv2.resize(mask.astype(np.uint8), None, fx=1 / scale, fy=1 / scale, interpolation=cv2.INTER_NEAREST) > 0
-            ox, oy = int(ox / scale), int(oy / scale)
+        # Pipeline stores origins in original-image A coordinates.  Only the analysis-frame
+        # mask needs upscaling here; scaling the origin again shifts exported masks.
+        ox, oy = int(round(ox)), int(round(oy))
         h, w = min(mask.shape[0], full.shape[0] - oy), min(mask.shape[1], full.shape[1] - ox)
         full[oy:oy + h, ox:ox + w] = mask[:h, :w].astype(np.uint8) * 255
         rel = f"masks/{c.claim_id}_imageA.png"
