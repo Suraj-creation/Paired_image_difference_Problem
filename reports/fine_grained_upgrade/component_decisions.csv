@@ -1,0 +1,9 @@
+component,role,evidence
+same-viewport residual,keep,native pixel changes retain subtle CSS edits
+threshold + residual extent,keep,localization is derived from observed changed pixels
+geometric matcher / warp,exclude here,all benchmark pairs share a 1280x800 canvas; warp can suppress tiny edits
+DINOv2,exclude here,semantic invariance is counter to pixel-level fine-grained detection
+AnyChange / SAM,exclude here,remote-sensing change domain mismatch
+Qwen3-VL as mask generator,exclude,free-form localization must not override pixel evidence; published DiffSpot results show low recall
+Qwen3-VL crop reinspection,conditional explanation check,pixel-selected crop; measured separately for yes/no and abstention; never writes a mask
+OCR,conditional explanation stage,use only for text-region reading after visual localization

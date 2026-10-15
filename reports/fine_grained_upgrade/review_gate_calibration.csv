@@ -1,0 +1,10 @@
+max_grid_coverage,calibration_automatic_change_recall,calibration_nuisance_automatic_false_change_rate,calibration_nuisance_review_rate,selected
+0.025,0.15384615384615385,0.0,1.0,False
+0.05,0.5,0.0,1.0,False
+0.075,0.6435897435897436,0.0,1.0,True
+0.1,0.767948717948718,0.0075,0.9925,False
+0.125,0.8782051282051282,0.0075,0.9925,False
+0.15,0.8846153846153846,0.0075,0.9925,False
+0.175,0.9,0.0075,0.9925,False
+0.2,0.9205128205128205,0.0075,0.9925,False
+0.25,0.9397435897435897,0.03,0.97,False

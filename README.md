@@ -24,6 +24,12 @@ print(result["report"]["text"])
 
 Presets: `classical` (ORB + low-level evidence, no downloads, CPU-capable) · `ocr` · `semantic` · `full`. Every stage and ablation switch is in [idu/config.py](idu/config.py).
 
+## Fine-grained screenshot evaluation
+
+The executed [DiffSpot upgrade notebook](notebooks/Fine_Grained_Image_Difference_Upgrade_Evaluation.ipynb) evaluates the complete public 4,400-pair web-interface test split. It uses a calibrated same-viewport pixel residual, a conservative review/abstention gate, and appropriate pair/element-box metrics; it does not treat element boxes as pixel masks. The data cache is local and excluded from Git. Results, provenance, and the root-cause assessment are in [reports/fine_grained_upgrade/](reports/fine_grained_upgrade/).
+
+This is a focused screenshot benchmark. It does not establish performance on photographed objects, documents, natural scenes, or remote-sensing images. Keep the domain-specific configuration and evidence checks in the general pipeline for those settings.
+
 ## Architecture
 
 ```mermaid
