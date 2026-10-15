@@ -1,0 +1,9 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "opencv": "5.0.0",
+  "cuda_available": true,
+  "gpu": "NVIDIA RTX 4000 Ada Generation",
+  "benchmark_pairs": 4400,
+  "note": "This selected detector uses OpenCV CPU operations; it has no heavy model loads."
+}

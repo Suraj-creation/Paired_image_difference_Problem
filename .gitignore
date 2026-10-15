@@ -11,3 +11,4 @@ demo_run/
 eval_suite/
 real_unseen_tests/
 real_test_pairs/
+data/diffspot_cache/

@@ -1,0 +1,5 @@
+nuisance,pairs,raw_candidate_rate,automatic_false_change_rate,review_rate,mean_grid_coverage,median_candidate_pixels
+global_brightness,100,1.0,0.0,1.0,0.73890625,192026.0
+local_shadow,100,1.0,0.0,1.0,0.62421875,420009.5
+two_pixel_translation,100,1.0,0.0,1.0,0.65546875,49286.5
+jpeg_recompression_q70,100,1.0,0.01,0.99,0.56109375,21125.0

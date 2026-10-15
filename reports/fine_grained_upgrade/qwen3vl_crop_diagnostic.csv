@@ -1,0 +1,365 @@
+id,difficulty,mutation_types,gt_changed,pixel_bbox,vlm_changed,vlm_change_type,vlm_object,vlm_before,vlm_after,vlm_nuisance,vlm_explanation,vlm_raw
+fc37b93c-80cd-4d90-96a5-5879434a4022,easy,mutate_font_weight,True,"[24, 172, 325, 197]",no,none,text and underline,"Soho Works 10 Jay
+Meetings and events","Soho Works 10 Jay
+Meetings and events",none,"The text content and the underline beneath 'Soho Works 10 Jay' are identical in both images. There is no difference in content, font, or structure. The only perceptible difference is a slight variation in brightness or contrast, which is not sufficient to classify as a genuine content change. Therefore, the change type is 'none'.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text and underline"",
+  ""before"": ""Soho Works 10 Jay\nMeetings and events"",
+  ""after"": ""Soho Works 10 Jay\nMeetings and events"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content and the underline beneath 'Soho Works 10 Jay' are identical in both images. There is no difference in content, font, or structure. The only perceptible difference is a slight variation in brightness or contrast, which is not sufficient to classify as a genuine content change. Therefore, the change type is 'none'.""
+}"
+741dd284-106e-4507-8b78-910e9a71c7df,easy,mutate_color,True,"[1190, 776, 1255, 787]",no,color_change,text,Privacy Terms,Privacy Terms,lighting,"The text 'Privacy Terms' appears identical in both images, but the color of the text is darker in Image 2 compared to Image 1, indicating a lighting or contrast adjustment. There is no change in content, structure, or position.","{
+  ""changed"": ""no"",
+  ""change_type"": ""color_change"",
+  ""object"": ""text"",
+  ""before"": ""Privacy Terms"",
+  ""after"": ""Privacy Terms"",
+  ""nuisance"": ""lighting"",
+  ""explanation"": ""The text 'Privacy Terms' appears identical in both images, but the color of the text is darker in Image 2 compared to Image 1, indicating a lighting or contrast adjustment. There is no change in content, structure, or position.""
+}"
+73cb937d-bebd-4c9e-aadc-49b5f72a1fa9,easy,mutate_position,True,"[194, 58, 255, 67]",yes,text_change,text,Browse Add,BrowseAdd,none,"The text in the 'before' image shows two separate words: 'Browse' and 'Add', while in the 'after' image, these two words are concatenated into a single word: 'BrowseAdd'. This is a genuine content change, not a visual artifact like blur or misalignment.","{
+  ""changed"": ""yes"",
+  ""change_type"": ""text_change"",
+  ""object"": ""text"",
+  ""before"": ""Browse Add"",
+  ""after"": ""BrowseAdd"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text in the 'before' image shows two separate words: 'Browse' and 'Add', while in the 'after' image, these two words are concatenated into a single word: 'BrowseAdd'. This is a genuine content change, not a visual artifact like blur or misalignment.""
+}"
+d3e5c1ab-d043-40c6-bb68-2667be9a0482,easy,mutate_opacity,True,"[392, 619, 889, 639]",no,color_change,text,Das sagt die HR-Community über Events der DGFP,Das sagt die HR-Community über Events der DGFP,lighting,"The text content is identical in both images, but the color (specifically, the brightness and saturation) has changed. The text in the first image is darker, while the text in the second image is lighter, indicating a lighting or contrast adjustment rather than any actual content alteration.","{
+  ""changed"": ""no"",
+  ""change_type"": ""color_change"",
+  ""object"": ""text"",
+  ""before"": ""Das sagt die HR-Community über Events der DGFP"",
+  ""after"": ""Das sagt die HR-Community über Events der DGFP"",
+  ""nuisance"": ""lighting"",
+  ""explanation"": ""The text content is identical in both images, but the color (specifically, the brightness and saturation) has changed. The text in the first image is darker, while the text in the second image is lighter, indicating a lighting or contrast adjustment rather than any actual content alteration.""
+}"
+5234c2fd-01d7-49bc-8ff9-069c2945f05d,easy,mutate_rounded,True,"[550, 354, 730, 390]",no,none,button,Image 1,Image 2,none,"The button in both images is identical in content, shape, and appearance. The only difference is that Image 2 has a slightly more rounded corner and a slightly different aspect ratio, which is likely due to minor misalignment or cropping differences rather than a genuine content change. The text 'FRAME IT FOR LESS' is unchanged, and there are no alterations in color, brightness, or structure that indicate a real modification.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""button"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The button in both images is identical in content, shape, and appearance. The only difference is that Image 2 has a slightly more rounded corner and a slightly different aspect ratio, which is likely due to minor misalignment or cropping differences rather than a genuine content change. The text 'FRAME IT FOR LESS' is unchanged, and there are no alterations in color, brightness, or structure that indicate a real modification.""
+}"
+a65eb4ec-830a-46ac-87c1-3f7fcd610e5e,easy,mutate_border,True,"[0, 177, 1280, 178]",no,none,breadcrumb navigation,Startseite > Events & Highlights > Veranstaltungen > Ski- und Weingenusswoche | Hochkonig | Skifahren & Genuss,Startseite > Events & Highlights > Veranstaltungen > Ski- und Weingenusswoche | Hochkonig | Skifahren & Genuss,none,"The text content, font, spacing, and structure of the breadcrumb navigation are identical in both images. The only visual difference is the thickness of the horizontal line below the text, which is a stylistic variation and not a content change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""breadcrumb navigation"",
+  ""before"": ""Startseite > Events & Highlights > Veranstaltungen > Ski- und Weingenusswoche | Hochkonig | Skifahren & Genuss"",
+  ""after"": ""Startseite > Events & Highlights > Veranstaltungen > Ski- und Weingenusswoche | Hochkonig | Skifahren & Genuss"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content, font, spacing, and structure of the breadcrumb navigation are identical in both images. The only visual difference is the thickness of the horizontal line below the text, which is a stylistic variation and not a content change.""
+}"
+a9b97f0a-08ef-4860-89dd-c6350da877f0,easy,mutate_line_height,True,"[144, 717, 795, 800]",no,none,text,"Using Weather25.com you can check the current weather in all cities around the world. Our weather forecast is based on state of the art forecasting technologies, which update the forecast every few min for a precise location.","Using Weather25.com you can check the current weather in all cities around the world. Our weather forecast is based on state of the art forecasting technologies, which update the forecast every few min for a precise location.",none,"The text content is identical in both images. The only difference is a minor visual artifact: the end of the sentence in the 'after' image is cut off, which is likely due to cropping or alignment rather than a genuine content change. However, since the text itself is the same and the cut-off is an artifact of the crop, it does not constitute a genuine content change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""Using Weather25.com you can check the current weather in all cities around the world. Our weather forecast is based on state of the art forecasting technologies, which update the forecast every few min for a precise location."",
+  ""after"": ""Using Weather25.com you can check the current weather in all cities around the world. Our weather forecast is based on state of the art forecasting technologies, which update the forecast every few min for a precise location."",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content is identical in both images. The only difference is a minor visual artifact: the end of the sentence in the 'after' image is cut off, which is likely due to cropping or alignment rather than a genuine content change. However, since the text itself is the same and the cut-off is an artifact of the crop, it does not constitute a genuine content change.""
+}"
+59c8f661-d1f8-4a6a-a4f6-3bf5bf5221df,easy,mutate_rounded,True,"[416, 683, 512, 723]",yes,shape_or_structure_change,Submit button,rectangular,rounded rectangular,none,"The primary difference between the two images is the shape of the button: the first image shows a rectangular button, while the second image shows a rounded rectangular button. This is a structural change in the button's geometry, not a variation in lighting, color, or alignment.","{
+  ""changed"": ""yes"",
+  ""change_type"": ""shape_or_structure_change"",
+  ""object"": ""Submit button"",
+  ""before"": ""rectangular"",
+  ""after"": ""rounded rectangular"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The primary difference between the two images is the shape of the button: the first image shows a rectangular button, while the second image shows a rounded rectangular button. This is a structural change in the button's geometry, not a variation in lighting, color, or alignment.""
+}"
+a7b99f2e-9096-4f7d-9dd0-80376bca4e40,easy,mutate_gradient,True,"[440, 104, 560, 136]",no,none,calendar event list,Image 1,Image 2,none,"The two images are identical in content, including text, layout, and color. There is no difference in text, structure, or visual properties beyond the fact that they are crops of the same region from different images, which is expected when aligning crops.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""calendar event list"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, including text, layout, and color. There is no difference in text, structure, or visual properties beyond the fact that they are crops of the same region from different images, which is expected when aligning crops.""
+}"
+979cc625-6aaf-445e-8d1c-23de380ffc36,easy,mutate_font_weight,True,"[394, 168, 885, 181]",no,none,text and metadata line,Escrito por Redação AjudaPopular 📅 Atualizado em 3 de dezembro de 2019 às 22:21,Escrito por Redação AjudaPopular 📅 Atualizado em 3 de dezembro de 2019 às 22:21,none,"The two images are identical in content, including text, font, spacing, and layout. There are no visible changes in content, structure, or appearance between the two crops.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text and metadata line"",
+  ""before"": ""Escrito por Redação AjudaPopular 📅 Atualizado em 3 de dezembro de 2019 às 22:21"",
+  ""after"": ""Escrito por Redação AjudaPopular 📅 Atualizado em 3 de dezembro de 2019 às 22:21"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, including text, font, spacing, and layout. There are no visible changes in content, structure, or appearance between the two crops.""
+}"
+ebd6cb8c-5eba-4b04-b119-89c0169b409b,medium,mutate_font_weight,True,"[32, 173, 81, 188]",no,none,text,Syllabi: We have co,Syllabi: We have co,none,"The two images are identical in content, with no discernible changes in text, structure, or visual properties. The text 'Syllabi:' and the beginning of the sentence 'We have co' are exactly the same in both images. There is no evidence of any alteration, such as brightness, blur, or misalignment, that would indicate a genuine content change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""Syllabi: We have co"",
+  ""after"": ""Syllabi: We have co"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, with no discernible changes in text, structure, or visual properties. The text 'Syllabi:' and the beginning of the sentence 'We have co' are exactly the same in both images. There is no evidence of any alteration, such as brightness, blur, or misalignment, that would indicate a genuine content change.""
+}"
+19d345e1-5341-4c45-a1ca-b428cbbd329c,medium,mutate_spacing,True,"[500, 485, 780, 800]",no,none,form,Image 1,Image 2,none,"The two images are identical in content, structure, and text. There are no changes in text, layout, or visual elements. The only difference is that Image 2 appears slightly brighter, which is a lighting variation, but since the content is unchanged, it is not considered a genuine content change. The 'nuisance' is 'lighting', but the instruction specifies to answer 'changed=no' if the only difference is lighting, etc., and to name it in nuisance. However, since the question asks to return ONLY JSON with 'changed=no' and 'nuisance' as 'none' if no genuine content change, and the only difference is lighting, we follow the instruction to mark it as 'none' for nuisance.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""form"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, structure, and text. There are no changes in text, layout, or visual elements. The only difference is that Image 2 appears slightly brighter, which is a lighting variation, but since the content is unchanged, it is not considered a genuine content change. The 'nuisance' is 'lighting', but the instruction specifies to answer 'changed=no' if the only difference is lighting, etc., and to name it in nuisance. However, since the question asks to return ONLY JSON with 'changed=no' and 'nuisance' as 'none' if no genuine content change, and the only difference is lighting, we follow the instruction to mark it as 'none' for nuisance.""
+}"
+51d77826-4af1-42d7-a7b5-547874be44c0,medium,mutate_color,True,"[520, 292, 760, 307]",no,none,text,The digital home of Dr. Daniel Soper polymath • penseur • man of letters,The digital home of Dr. Daniel Soper polymath • penseur • man of letters,none,"The two images are identical in content, font, spacing, and appearance. There are no differences in text, layout, or visual artifacts. The images are crops of the same region, and no content has been added, removed, or altered.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""The digital home of Dr. Daniel Soper polymath • penseur • man of letters"",
+  ""after"": ""The digital home of Dr. Daniel Soper polymath • penseur • man of letters"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, font, spacing, and appearance. There are no differences in text, layout, or visual artifacts. The images are crops of the same region, and no content has been added, removed, or altered.""
+}"
+9def678b-002a-42c4-b97e-de77ed68d469,medium,mutate_letter_spacing,True,"[826, 498, 904, 516]",no,none,text and label,"PASTA & RISO
+Merda de can ovver","PASTA & RISO
+Merda de can ovver",none,"The text content and layout are identical in both images. There are no visible changes in content, structure, or appearance beyond the crop and alignment, which are consistent across both images.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text and label"",
+  ""before"": ""PASTA & RISO\nMerda de can ovver"",
+  ""after"": ""PASTA & RISO\nMerda de can ovver"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content and layout are identical in both images. There are no visible changes in content, structure, or appearance beyond the crop and alignment, which are consistent across both images.""
+}"
+9eacce8c-34cf-4309-b728-50bef90f3d02,medium,mutate_font_size,True,"[440, 290, 840, 511]",no,none,popup message,Image 1,Image 2,none,"The two images are identical in content, text, layout, and visual properties. There is no discernible difference in text, structure, or visual artifacts between them.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""popup message"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, text, layout, and visual properties. There is no discernible difference in text, structure, or visual artifacts between them.""
+}"
+552e60cf-4623-4c52-8247-c1f920f3a5f2,medium,mutate_letter_spacing,True,"[88, 20, 837, 33]",no,none,header banner,INDUSTRIAL SUPLAYER INDONESIA HOME BLOG INDUSTRIAL DIY INSPIRASI,INDUSTRIAL SUPLAYER INDONESIA HOME BLOG INDUSTRIAL DIY INSPIRASI,none,"The two images are identical in content, text, and visual appearance. There is no difference in text, layout, or visual artifacts. The images are crops of the same region, and no changes have occurred.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""header banner"",
+  ""before"": ""INDUSTRIAL SUPLAYER INDONESIA HOME BLOG INDUSTRIAL DIY INSPIRASI"",
+  ""after"": ""INDUSTRIAL SUPLAYER INDONESIA HOME BLOG INDUSTRIAL DIY INSPIRASI"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, text, and visual appearance. There is no difference in text, layout, or visual artifacts. The images are crops of the same region, and no changes have occurred.""
+}"
+6923bd98-cfa1-4e0e-a1d1-e7df6661c52d,medium,mutate_border,True,"[1035, 12, 1136, 46]",no,color_change,button,orange button,brown button,none,"The only difference between the two images is the color of the button's border and text, which has changed from orange to brown. The text 'Los geht's' and the button's shape remain identical. This is a color change, not a genuine content change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""color_change"",
+  ""object"": ""button"",
+  ""before"": ""orange button"",
+  ""after"": ""brown button"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The only difference between the two images is the color of the button's border and text, which has changed from orange to brown. The text 'Los geht's' and the button's shape remain identical. This is a color change, not a genuine content change.""
+}"
+53858ae8-2c59-441b-a804-99185047a398,medium,mutate_text,True,"[709, 581, 764, 592]",yes,text_change,text,ng fixes the we,ng the fixes we,none,"The text in Image 1 is 'ng fixes the we', while in Image 2 it is 'ng the fixes we'. The words 'fixes' and 'the' have swapped positions, indicating a genuine content change in the text, not just a visual artifact like lighting or misalignment.","{
+  ""changed"": ""yes"",
+  ""change_type"": ""text_change"",
+  ""object"": ""text"",
+  ""before"": ""ng fixes the we"",
+  ""after"": ""ng the fixes we"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text in Image 1 is 'ng fixes the we', while in Image 2 it is 'ng the fixes we'. The words 'fixes' and 'the' have swapped positions, indicating a genuine content change in the text, not just a visual artifact like lighting or misalignment.""
+}"
+41973bd4-d732-4477-a824-b9482d686f89,medium,mutate_text,True,"[465, 554, 510, 569]",yes,text_change,text,ent les grilles,ent grilles les,none,"The text in the first image is 'ent les grilles', while in the second image it is 'ent grilles les'. The words 'les' and 'grilles' have been swapped in position, indicating a genuine content change rather than a visual artifact like blur, compression, or misalignment.","{
+  ""changed"": ""yes"",
+  ""change_type"": ""text_change"",
+  ""object"": ""text"",
+  ""before"": ""ent les grilles"",
+  ""after"": ""ent grilles les"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text in the first image is 'ent les grilles', while in the second image it is 'ent grilles les'. The words 'les' and 'grilles' have been swapped in position, indicating a genuine content change rather than a visual artifact like blur, compression, or misalignment.""
+}"
+ffe50b50-5375-4424-ae2d-274a6a4f4eb8,medium,mutate_text,True,"[401, 215, 879, 226]",yes,text_change,text,"PREMIUM POST & BEAM KITS, HANDCRAFTED IN THE USA","PREMIUM POST & BEAM KITS, HANDCRAFTED IN A USA",none,"The only difference between the two images is the text: 'THE USA' in the first image has been changed to 'A USA' in the second image. This is a textual alteration, not a visual artifact like blur or misalignment.","{
+  ""changed"": ""yes"",
+  ""change_type"": ""text_change"",
+  ""object"": ""text"",
+  ""before"": ""PREMIUM POST & BEAM KITS, HANDCRAFTED IN THE USA"",
+  ""after"": ""PREMIUM POST & BEAM KITS, HANDCRAFTED IN A USA"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The only difference between the two images is the text: 'THE USA' in the first image has been changed to 'A USA' in the second image. This is a textual alteration, not a visual artifact like blur or misalignment.""
+}"
+c0a18791-d80d-4bd0-a6e3-848c64b7dbc5,hard,mutate_font_weight,True,"[1182, 39, 1206, 47]",no,none,text box with 'ENG',Image 1,Image 2,none,"The two images are identical in content, including the text 'ENG', the bounding box, and all visual properties. There is no difference in brightness, shadow, blur, compression, or alignment. Therefore, no genuine content change exists.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text box with 'ENG'"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, including the text 'ENG', the bounding box, and all visual properties. There is no difference in brightness, shadow, blur, compression, or alignment. Therefore, no genuine content change exists.""
+}"
+cd0446d2-1f63-4c22-a871-b5a2b15e3794,hard,mutate_color,True,"[18, 790, 676, 800]",no,none,text,"Rasi Palan, Natchathira Palan, and Lagna Palan provide general, astrology sign-based predictions:","Rasi Palan, Natchathira Palan, and Lagna Palan provide general, astrology sign-based predictions:",none,"The text content in both images is identical. There are no differences in characters, spacing, or punctuation. The images are crops of the same region and appear to be identical in content and appearance.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""Rasi Palan, Natchathira Palan, and Lagna Palan provide general, astrology sign-based predictions:"",
+  ""after"": ""Rasi Palan, Natchathira Palan, and Lagna Palan provide general, astrology sign-based predictions:"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content in both images is identical. There are no differences in characters, spacing, or punctuation. The images are crops of the same region and appear to be identical in content and appearance.""
+}"
+5dd26788-3f87-4dbd-8e2d-548e65e96ab8,hard,mutate_rounded,True,"[759, 498, 860, 536]",no,none,button,blue button with text 'Start now',blue button with text 'Start now',none,"The two images are identical, showing the same button with the same text and appearance. There is no content change, and no visual artifacts such as lighting, shadow, blur, or misalignment are present.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""button"",
+  ""before"": ""blue button with text 'Start now'"",
+  ""after"": ""blue button with text 'Start now'"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical, showing the same button with the same text and appearance. There is no content change, and no visual artifacts such as lighting, shadow, blur, or misalignment are present.""
+}"
+20fc577c-0697-4bf9-93c1-1cfed4cd04ef,hard,mutate_font_weight,True,"[235, 15, 285, 43]",no,none,text,tut ÖFI,tut ÖFI,none,"The text 'tut ÖFI' is identical in both images, with no discernible changes in content, appearance, or structure. The images are crops of the same region, and the only visual difference is minor pixel-level variation, which does not constitute a genuine content change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""tut ÖFI"",
+  ""after"": ""tut ÖFI"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text 'tut ÖFI' is identical in both images, with no discernible changes in content, appearance, or structure. The images are crops of the same region, and the only visual difference is minor pixel-level variation, which does not constitute a genuine content change.""
+}"
+efd18f0f-976b-4c53-8414-0ca57cb8a384,hard,mutate_justify,True,"[32, 22, 1061, 35]",no,none,navigation bar,Image 1,Image 2,none,"The two images are identical in content, structure, and text. The only difference is a minor misalignment of the 'SMARTBROKER+' logo and the 'Produkte' dropdown menu, which is a positional artifact during cropping and alignment, not a genuine content change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""navigation bar"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, structure, and text. The only difference is a minor misalignment of the 'SMARTBROKER+' logo and the 'Produkte' dropdown menu, which is a positional artifact during cropping and alignment, not a genuine content change.""
+}"
+4b9fa10a-90f7-4451-9392-fa6848917023,hard,mutate_color,True,"[1199, 22, 1256, 37]",no,none,TLC logo,TLC logo,TLC logo,none,"The two images are identical in content, including text, font, and layout. There are no visible differences in brightness, color, blur, or alignment. The text 'TLC logo' is exactly the same in both images.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""TLC logo"",
+  ""before"": ""TLC logo"",
+  ""after"": ""TLC logo"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical in content, including text, font, and layout. There are no visible differences in brightness, color, blur, or alignment. The text 'TLC logo' is exactly the same in both images.""
+}"
+ae2dd386-db3b-4463-b743-f94aacb2a3f8,hard,mutate_position,True,"[79, 51, 144, 60]",no,none,BOOKS dropdown button,Image 1,Image 2,none,"The two images are identical crops of the same region. There are no visible differences in content, text, or structure. The red background, white text 'BOOKS', the downward arrow, and the partial 'D' are exactly the same in both images. No changes in brightness, blur, compression, or alignment are detectable.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""BOOKS dropdown button"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical crops of the same region. There are no visible differences in content, text, or structure. The red background, white text 'BOOKS', the downward arrow, and the partial 'D' are exactly the same in both images. No changes in brightness, blur, compression, or alignment are detectable.""
+}"
+22b48d03-9b2f-4fdc-9dce-3300b8ac24db,hard,mutate_color,True,"[209, 600, 283, 615]",no,none,text,Categories: Con,Categories: Con,none,"The text in both images is identical, and there is no discernible difference in brightness, shadow, blur, compression, or alignment. The cropped region is the same in both images.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""Categories: Con"",
+  ""after"": ""Categories: Con"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text in both images is identical, and there is no discernible difference in brightness, shadow, blur, compression, or alignment. The cropped region is the same in both images.""
+}"
+7a652d22-2420-4734-8bae-343128c5525e,hard,mutate_text,True,"[737, 736, 824, 744]",no,none,text,1 Febbraio 2026,1 Febbraio 2026,none,"The text content '1 Febbraio 2026' is identical in both images. There are no visible differences in content, appearance, or structure between the two crops. The images are described as being aligned as well as possible, and no noise or artifact is present to suggest a change.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""1 Febbraio 2026"",
+  ""after"": ""1 Febbraio 2026"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content '1 Febbraio 2026' is identical in both images. There are no visible differences in content, appearance, or structure between the two crops. The images are described as being aligned as well as possible, and no noise or artifact is present to suggest a change.""
+}"
+32076b11-7f5b-49d4-bc5b-62d89459e9f4,hard,mutate_color,True,"[673, 293, 1149, 309]",no,none,text,"35 000 Ft felettí vásárlás esetén, a vásárlás napján 3 órás időtartamra.*","35 000 Ft felettí vásárlás esetén, a vásárlás napján 3 órás időtartamra.*",none,"The text content is identical in both images. There are no differences in characters, spacing, or punctuation. The images are identical crops of the same region, with no visual artifacts or alterations.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""text"",
+  ""before"": ""35 000 Ft felettí vásárlás esetén, a vásárlás napján 3 órás időtartamra.*"",
+  ""after"": ""35 000 Ft felettí vásárlás esetén, a vásárlás napján 3 órás időtartamra.*"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The text content is identical in both images. There are no differences in characters, spacing, or punctuation. The images are identical crops of the same region, with no visual artifacts or alterations.""
+}"
+nodiff-936761f7-8868-4fff-9ed7-927b69e38899,no_diff,,False,,no,none,entire image,image A,image B,none,"The two images are identical. They are crops of the same region from the original image, and there is no difference in content, text, or structure between them. The user's instruction to 'align as well as possible' was followed, and no genuine content change exists.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""image A"",
+  ""after"": ""image B"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. They are crops of the same region from the original image, and there is no difference in content, text, or structure between them. The user's instruction to 'align as well as possible' was followed, and no genuine content change exists.""
+}"
+syn_nodiff_c10cfe42-a145-4e93-a5dd-4972f8763dbd,no_diff,,False,,no,none,entire image,image A,image B,none,"The two images are identical. They are crops of the same region from the original image, and there is no difference in content, text, layout, or visual properties between them.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""image A"",
+  ""after"": ""image B"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. They are crops of the same region from the original image, and there is no difference in content, text, layout, or visual properties between them.""
+}"
+nodiff-cf4a69cf-f1d5-4205-95c9-b13a02bfe497,no_diff,,False,,no,none,entire image,image A,image B,none,"The two images are identical. There is no content change, no difference in brightness, shadow, blur, compression, or misalignment. The text, layout, and visual elements are exactly the same.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""image A"",
+  ""after"": ""image B"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. There is no content change, no difference in brightness, shadow, blur, compression, or misalignment. The text, layout, and visual elements are exactly the same.""
+}"
+nodiff-f78b0d0e-084a-4247-8927-3eff7a4b0556,no_diff,,False,,no,none,Monthly Crystal Subscription Box section,Image 1,Image 2,none,"The two images are identical. There are no differences in content, text, layout, or visual properties. The '600×400' placeholder image, the 'Subscribe Now' button, the descriptive text, and all other elements are exactly the same in both images.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""Monthly Crystal Subscription Box section"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. There are no differences in content, text, layout, or visual properties. The '600×400' placeholder image, the 'Subscribe Now' button, the descriptive text, and all other elements are exactly the same in both images.""
+}"
+nodiff-6489f72c-50a7-4db3-bd86-fba6608172d8,no_diff,,False,,no,none,entire image,Image 1,Image 2,none,"The two images are identical. There are no differences in content, text, layout, or visual elements between them. They are exact duplicates of each other.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. There are no differences in content, text, layout, or visual elements between them. They are exact duplicates of each other.""
+}"
+nodiff-36f817e5-1a81-4bdc-a7d6-659f296e0ebe,no_diff,,False,,no,none,entire image,image A,image B,none,"The two images are identical. They are crops of the same region from the original image, and there is no content change, including no text, layout, or visual artifacts difference. The only difference is that image B is a slightly more zoomed-in crop of image A, but the content remains exactly the same.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""image A"",
+  ""after"": ""image B"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. They are crops of the same region from the original image, and there is no content change, including no text, layout, or visual artifacts difference. The only difference is that image B is a slightly more zoomed-in crop of image A, but the content remains exactly the same.""
+}"
+nodiff-0212d337-0709-437c-a813-ed62c2102df1,no_diff,,False,,no,none,entire image,Image 1,Image 2,none,"The two images are identical. They are crops of the same webpage, showing the same text, layout, and visual elements. There are no differences in content, structure, or appearance between them.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. They are crops of the same webpage, showing the same text, layout, and visual elements. There are no differences in content, structure, or appearance between them.""
+}"
+syn_nodiff_fab88cf3-d188-4dfe-b3d6-780ccf424dbf,no_diff,,False,,no,none,entire image,image A,image B,none,"The two images are identical. There is no content change, no difference in brightness, shadow, blur, compression, or misalignment. The entire visual content, including the logo, text, and layout, is exactly the same.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""image A"",
+  ""after"": ""image B"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. There is no content change, no difference in brightness, shadow, blur, compression, or misalignment. The entire visual content, including the logo, text, and layout, is exactly the same.""
+}"
+nodiff-260664c5-0445-471c-b641-116ddcd57ec6,no_diff,,False,,no,none,entire image,image1,image2,none,"The two images are identical. There are no differences in content, text, layout, or visual properties. The images are exact duplicates.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""image1"",
+  ""after"": ""image2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. There are no differences in content, text, layout, or visual properties. The images are exact duplicates.""
+}"
+nodiff-fece9bcb-8b99-4175-8c43-0454db89ecfd,no_diff,,False,,no,none,entire image,Image 1,Image 2,none,"The two images are identical. They show the same webpage content, including the same text, layout, colors, and design elements. There are no differences in content, structure, or visual properties between the two images.","{
+  ""changed"": ""no"",
+  ""change_type"": ""none"",
+  ""object"": ""entire image"",
+  ""before"": ""Image 1"",
+  ""after"": ""Image 2"",
+  ""nuisance"": ""none"",
+  ""explanation"": ""The two images are identical. They show the same webpage content, including the same text, layout, colors, and design elements. There are no differences in content, structure, or visual properties between the two images.""
+}"

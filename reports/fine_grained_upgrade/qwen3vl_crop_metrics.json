@@ -1,0 +1,12 @@
+{
+  "pairs": 40,
+  "tp": 5,
+  "fp": 0,
+  "fn": 25,
+  "tn": 10,
+  "precision": 1.0,
+  "recall": 0.16666666666666666,
+  "f1": 0.2857142857142857,
+  "no_change_specificity": 1.0,
+  "uncertain_rate": 0.0
+}

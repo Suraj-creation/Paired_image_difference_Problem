@@ -1,0 +1,9 @@
+split,task_type,difficulty,pairs
+calibration,no_diff,no_diff,100
+calibration,visual_diff,easy,260
+calibration,visual_diff,hard,260
+calibration,visual_diff,medium,260
+holdout,no_diff,no_diff,400
+holdout,visual_diff,easy,1040
+holdout,visual_diff,hard,1040
+holdout,visual_diff,medium,1040
