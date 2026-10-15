@@ -1,0 +1,8 @@
+,component,state,detail,load_s,test_s,peak_gpu_gb
+0,dinov2,tested,"cosine(A,B)=1.000",2.2,0.2,0.06
+1,matcher:lightglue,tested,1797 matches,0.1,0.2,0.48
+2,matcher:loftr,tested,7144 matches,0.2,0.3,1.73
+3,matcher:orb,tested,4341 matches,0.0,0.1,0.01
+4,ocr,tested,"lines: ['LOT AB-3457', 'EXP 2028-07', 'NET 373...",1.3,0.1,0.46
+5,anychange,tested,0 change masks,0.6,5.6,2.91
+6,vlm,tested,'Colorful abstract digital chaos',7.0,0.4,9.06

@@ -44,7 +44,7 @@ def merge_candidates(cands, iou=0.3, contain=0.7, image_area=None, max_container
 
 class AnyChangeAdapter(Adapter):
     name = "anychange"
-    heavy = True
+    heavy = False
 
     def __init__(self, cfg, device):
         self.model_type, self.ckpt, self.device = cfg.anychange_model_type, cfg.anychange_sam_checkpoint, device
@@ -102,7 +102,8 @@ class AnyChangeAdapter(Adapter):
             conf = None
             for key in ("change_confidence", "confidence"):
                 if key in getattr(changemasks, "_stats", {}):
-                    conf = float(np.asarray(changemasks[key][i]).ravel()[0])
+                    val = changemasks[key][i]
+                    conf = float(val.detach().cpu().item() if hasattr(val, "detach") else np.asarray(val).ravel()[0])
             out.append({"bbox_a": [float(v) for v in box], "area_px": int(m.sum() / (s * s)), "raw_score": conf,
                         "mask_analysis": m, "mask_scale": s, "boxes_reported": has_boxes})
         return out

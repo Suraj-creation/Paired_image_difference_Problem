@@ -1,0 +1,15 @@
+{
+  "dataset_mirror": "ericyu/LEVIRCD_Cropped_256",
+  "mirror_api": "https://datasets-server.huggingface.co/rows",
+  "config": "default",
+  "split": "test",
+  "row_indices": [
+    0,
+    7,
+    19,
+    31,
+    43
+  ],
+  "retrieved_unix": 1792065177.5054336,
+  "warning": "This is a public mirror slice; consult the original dataset provider for licence and full download."
+}

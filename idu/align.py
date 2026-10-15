@@ -156,6 +156,7 @@ DOMAIN_ORDER = {
     "document": ["identity", "homography", "similarity", "affine"],
     "screenshot": ["identity", "similarity", "homography"],
     "fixed_camera": ["identity", "similarity", "affine"],
+    "remote_sensing": ["identity", "similarity", "affine"],
 }
 DEFAULT_ORDER = ["identity", "similarity", "affine", "homography"]
 
@@ -183,11 +184,12 @@ def estimate_alignment(img_a, img_b, k_a, k_b, scores, cfg) -> dict:
         out["candidates"][kind] = {"n_inliers": int(inl.sum()),
                                    "median_err": float(np.median(err[inl])) if inl.any() else None}
     best = max((f[2].sum() for f in fits.values()), default=0)
-    chosen = next((k for k in order if k in fits and fits[k][2].sum() >= max(cfg.min_inliers, 0.95 * best)), None)
+    effective_min_inliers = min(cfg.min_inliers, max(4, int(0.25 * len(k_a)))) if len(k_a) >= 4 else cfg.min_inliers
+    chosen = next((k for k in order if k in fits and fits[k][2].sum() >= max(effective_min_inliers, 0.95 * best)), None)
 
     if chosen is None:
-        if same_size and _ncc(img_a, img_b) > 0.8:
-            chosen, out["assumption"] = "identity", "few matches; identity assumed (global NCC > 0.8)"
+        if same_size and (cfg.domain in ("fixed_camera", "remote_sensing", "screenshot") or _ncc(img_a, img_b) > 0.4):
+            chosen, out["assumption"] = "identity", f"few matches; identity assumed ({cfg.domain} domain, same size)"
             fits.setdefault("identity", (np.eye(3), np.zeros(len(k_a)), np.zeros(len(k_a), bool)))
             out["reasons"].append(out["assumption"])
         else:
@@ -217,11 +219,11 @@ def estimate_alignment(img_a, img_b, k_a, k_b, scores, cfg) -> dict:
     out["inliers_a"] = pts
 
     assumed = "assumption" in out
-    if (not assumed and n_in >= 2 * cfg.min_inliers and out["inlier_ratio"] >= 0.5
-            and (out["median_err"] or 0) <= 1.5 * thr / cfg.ransac_thresh_px and out["coverage"] >= 0.2
+    if (not assumed and n_in >= 2 * effective_min_inliers and out["inlier_ratio"] >= 0.4
+            and (out["median_err"] or 0) <= 1.5 * thr / cfg.ransac_thresh_px and out["coverage"] >= 0.15
             and out["overlap"] >= 0.6):
         out["status"] = "reliable"
-    elif (assumed or (n_in >= cfg.min_inliers and out["inlier_ratio"] >= 0.25)) and out["overlap"] >= 0.3:
+    elif (assumed or (n_in >= effective_min_inliers and out["inlier_ratio"] >= 0.2)) and out["overlap"] >= 0.3:
         out["status"] = "approximate"
     else:
         out["status"] = "unreliable"

@@ -105,7 +105,8 @@ def add_semantic_obs(g, result, source, family, version):
 def add_anychange_obs(g, items, version):
     return [g.add_obs(source="anychange", source_version=version, observation_type="learned_change_mask",
                       family="learned_change", image="AB", bbox_a=it["bbox_a"],
-                      raw={"area_px": it["area_px"]}, raw_score=it["raw_score"],
+                      raw={"area_px": it["area_px"], "mask_analysis": it.get("mask_analysis"),
+                           "mask_scale": it.get("mask_scale", 1.0)}, raw_score=it["raw_score"],
                       score_kind="AnyChange change confidence (uncalibrated)" if it["raw_score"] is not None else None,
                       context={"location_semantics": "containing_object_or_segment"}) for it in items]
 
@@ -184,6 +185,8 @@ def decide_visual(f, cfg):
         nuis.append(f"vlm_says:{f['vlm_nuisance']}")
 
     if "appearance" not in support:
+        if f["learned"] and not contra:
+            return "needs_review", ["learned change model detected change; low-level residual below threshold"], support, contra
         return "abstained", ["no pixel evidence at this location even after native-resolution re-inspection; "
                              "semantic/learned proposal withheld"], support, contra
     if not strong:

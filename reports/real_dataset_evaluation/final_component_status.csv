@@ -1,0 +1,11 @@
+,component,state,detail,time,version
+0,dinov2,tested,ok in 0.0s,17:54:07,facebook/dinov2-small
+1,matcher,tested,ok,17:54:07,NaN
+2,lowlevel,tested,ok in 0.1s,17:54:07,NaN
+3,ocr,tested,ok in 0.0s,17:54:07,easyocr-1.7.2 langs=['en']
+4,anychange,tested,ok in 3.8s,17:54:11,torchange-0.0.4 AnyChange/vit_b
+5,m3diff,skipped,disabled by config,17:22:57,NaN
+6,vlm,tested,ok in 0.0s,17:54:11,Qwen/Qwen3-VL-4B-Instruct (transformers 4.57.6...
+7,verbalizer,tested,ok in 79.7s,17:56:00,NaN
+8,matcher:lightglue,tested,ok in 0.1s,17:54:07,lightglue+superpoint (git)
+9,vlm_hypotheses,tested,ok in 0.7s,17:54:12,NaN

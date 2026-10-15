@@ -91,7 +91,8 @@ def read_binary_mask(path: str, shape_hw=None) -> np.ndarray:
         raise ValueError(f"unreadable mask: {path}")
     if shape_hw is not None and tuple(m.shape) != tuple(shape_hw):
         m = cv2.resize(m, (shape_hw[1], shape_hw[0]), interpolation=cv2.INTER_NEAREST)
-    return m > 0
+    thr = 127 if m.max() > 1 else 0
+    return m > thr
 
 
 def naive_residual_baseline(path_a: str, path_b: str) -> np.ndarray:

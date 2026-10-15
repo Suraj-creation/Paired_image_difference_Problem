@@ -1,0 +1,98 @@
+dataset,row_idx,tp,fp,fn,tn,precision,recall,f1,iou,dice,accuracy,pair_gt_changed,pair_pred_changed,comparison_status,report,figure_path
+ericyu/LEVIRCD_Cropped_256,101,0,3563,0,61973,0.0,,0.0,0.0,0.0,0.9456329345703124,False,True,comparable_with_warnings,"**Comparison status:** comparable_with_warnings
+**Alignment:** identity (approximate)
+**Pair warnings:** A:visible_compression_blocking
+**Components that ran:** dinov2, matcher, lowlevel, ocr, anychange, vlm, verbalizer, matcher:lightglue, vlm_hypotheses
+
+### Accepted changes (6)
+- `claim_021` localized visual change (no semantic explanation) at A[248, 125, 254, 134]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_022` localized visual change (no semantic explanation) at A[37, 236, 38, 238]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_024` localized visual change (no semantic explanation) at A[191, 144, 205, 163]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_025` localized visual change (no semantic explanation) at A[238, 25, 256, 50]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_026` localized visual change (no semantic explanation) at A[49, 127, 72, 145]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_027` localized visual change (no semantic explanation) at A[37, 236, 38, 238]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+
+### Needs review (7)
+- `claim_001` shape_or_structure_change: road (a Y-shaped road intersection -> a single, straight road with no intersection) at A[71, 0, 232, 85]. Evidence: appearance, learned_change, vlm. alignment unreliable; corroborated by learned_change, vlm
+- `claim_007` localized visual change (no semantic explanation) at A[162, 50, 207, 77]. Evidence: appearance. alignment unreliable: residual may be registration error
+- `claim_010` localized visual change (no semantic explanation) at A[174, 34, 211, 77]. Evidence: appearance. alignment unreliable: residual may be registration error
+- `claim_015` localized visual change (no semantic explanation) at A[248, 125, 254, 134]. Evidence: appearance. nuisance explanation plausible: compression_artifact, local_displacement_explains_residual(misregistration or moved content)
+- `claim_018` localized visual change (no semantic explanation) at A[138, 32, 195, 84]. Evidence: appearance. alignment unreliable: residual may be registration error
+- `claim_020` localized visual change (no semantic explanation) at A[0, 175, 32, 206]. Evidence: learned_change. learned change model detected change; low-level residual below threshold
+- `claim_023` localized visual change (no semantic explanation) at A[96, 208, 112, 224]. Evidence: learned_change. learned change model detected change; low-level residual below threshold
+
+### Plausible nuisance factors (not established facts)
+- compression_artifact
+- far_from_alignment_inliers
+- focus_blur_difference
+- local_displacement_explains_residual(misregistration or moved content)
+
+_14 candidate(s) abstained. Scores are uncalibrated unless a calibrator was applied._",figures/LEVIR-CD-row-101.png
+ericyu/SYSU_CD,127,3735,4980,11379,45442,0.4285714285714285,0.2471218737594283,0.3134835704393806,0.1858763810092565,0.3134835704393806,0.7503814697265625,True,True,comparable,"**Comparison status:** comparable
+**Alignment:** similarity (reliable)
+**Components that ran:** dinov2, matcher, lowlevel, ocr, anychange, vlm, verbalizer, matcher:lightglue, vlm_hypotheses
+
+### Accepted changes (15)
+- `claim_010` localized visual change (no semantic explanation) at A[30, 132, 74, 181]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_012` localized visual change (no semantic explanation) at A[143, 139, 214, 207]. Evidence: appearance. very strong persistent pixel change under usable alignment, no nuisance signature; reported as a localized change WITHOUT semantic explanation
+- `claim_014` localized visual change (no semantic explanation) at A[82, 76, 143, 142]. Evidence: appearance. very strong persistent pixel change under usable alignment, no nuisance signature; reported as a localized change WITHOUT semantic explanation
+- `claim_022` localized visual change (no semantic explanation) at A[106, 69, 164, 121]. Evidence: appearance. very strong persistent pixel change under usable alignment, no nuisance signature; reported as a localized change WITHOUT semantic explanation
+- `claim_039` localized visual change (no semantic explanation) at A[56, 218, 124, 256]. Evidence: appearance. very strong persistent pixel change under usable alignment, no nuisance signature; reported as a localized change WITHOUT semantic explanation
+- `claim_049` localized visual change (no semantic explanation) at A[65, 7, 125, 72]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_050` localized visual change (no semantic explanation) at A[7, 151, 56, 230]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_051` localized visual change (no semantic explanation) at A[225, 114, 235, 135]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_052` localized visual change (no semantic explanation) at A[75, 187, 134, 248]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_053` localized visual change (no semantic explanation) at A[190, 5, 244, 28]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_054` localized visual change (no semantic explanation) at A[177, 139, 214, 191]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_055` localized visual change (no semantic explanation) at A[224, 25, 256, 81]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_056` localized visual change (no semantic explanation) at A[55, 74, 114, 139]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_057` localized visual change (no semantic explanation) at A[32, 184, 89, 249]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+- `claim_058` localized visual change (no semantic explanation) at A[70, 5, 128, 40]. Evidence: appearance, learned_change. strong persistent pixel change under usable alignment + independent support from learned_change
+
+### Needs review (38)
+- `claim_001` shape_or_structure_change: structures (a cluster of rectangular structures near a body of water, with vegetation on the left -> a large, irregularly shaped, light-colored area with no clear structures, surrounded by vegetation) at A[69, 5, 181, 104]. Evidence: appearance, learned_change, vlm. alignment unreliable; corroborated by learned_change, vlm
+- `claim_002` removed: structures (a cluster of rectangular structures on a hillside -> no structures visible in the same location) at A[131, 32, 256, 132]. Evidence: appearance, vlm. nuisance explanation plausible: focus_blur_difference; independent support from ['vlm']
+- `claim_005` localized visual change (no semantic explanation) at A[184, 5, 256, 64]. Evidence: appearance. alignment unreliable: residual may be registration error
+- `claim_008` localized visual change (no semantic explanation) at A[221, 5, 256, 41]. Evidence: appearance. alignment unreliable: residual may be registration error
+- `claim_009` localized visual change (no semantic explanation) at A[122, 156, 214, 226]. Evidence: appearance. nuisance explanation plausible: local_displacement_explains_residual(misregistration or moved content)
+- `claim_013` localized visual change (no semantic explanation) at A[0, 28, 33, 112]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_015` localized visual change (no semantic explanation) at A[13, 144, 74, 197]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+- `claim_016` localized visual change (no semantic explanation) at A[67, 132, 126, 185]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+- `claim_017` localized visual change (no semantic explanation) at A[40, 143, 102, 192]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+- `claim_018` localized visual change (no semantic explanation) at A[9, 182, 50, 230]. Evidence: appearance. nuisance explanation plausible: far_from_alignment_inliers, focus_blur_difference
+- `claim_019` localized visual change (no semantic explanation) at A[8, 149, 87, 221]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+- `claim_020` localized visual change (no semantic explanation) at A[107, 48, 170, 111]. Evidence: appearance. nuisance explanation plausible: local_displacement_explains_residual(misregistration or moved content)
+- `claim_021` localized visual change (no semantic explanation) at A[112, 234, 158, 256]. Evidence: appearance. nuisance explanation plausible: local_displacement_explains_residual(misregistration or moved content)
+- `claim_023` localized visual change (no semantic explanation) at A[0, 29, 45, 70]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_024` localized visual change (no semantic explanation) at A[159, 188, 228, 252]. Evidence: appearance. nuisance explanation plausible: far_from_alignment_inliers, focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+- `claim_025` localized visual change (no semantic explanation) at A[41, 132, 92, 161]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_026` localized visual change (no semantic explanation) at A[0, 94, 17, 129]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_027` localized visual change (no semantic explanation) at A[17, 20, 87, 78]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_028` localized visual change (no semantic explanation) at A[121, 156, 174, 188]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_029` localized visual change (no semantic explanation) at A[140, 210, 196, 256]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_030` localized visual change (no semantic explanation) at A[9, 179, 49, 230]. Evidence: appearance. nuisance explanation plausible: far_from_alignment_inliers, focus_blur_difference
+- `claim_031` localized visual change (no semantic explanation) at A[92, 178, 151, 223]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_032` localized visual change (no semantic explanation) at A[201, 87, 256, 135]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_033` localized visual change (no semantic explanation) at A[119, 72, 174, 121]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+- `claim_034` localized visual change (no semantic explanation) at A[0, 94, 41, 156]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_035` localized visual change (no semantic explanation) at A[0, 126, 39, 206]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_036` localized visual change (no semantic explanation) at A[56, 25, 87, 78]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_037` localized visual change (no semantic explanation) at A[185, 166, 214, 197]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_038` localized visual change (no semantic explanation) at A[57, 34, 85, 80]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_040` localized visual change (no semantic explanation) at A[1, 11, 56, 70]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_041` localized visual change (no semantic explanation) at A[53, 163, 106, 216]. Evidence: appearance. pixel-only evidence of moderate strength
+- `claim_042` localized visual change (no semantic explanation) at A[43, 180, 106, 233]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_043` localized visual change (no semantic explanation) at A[0, 99, 17, 153]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_044` localized visual change (no semantic explanation) at A[0, 5, 28, 45]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_045` localized visual change (no semantic explanation) at A[68, 188, 125, 247]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_046` localized visual change (no semantic explanation) at A[117, 87, 150, 121]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_047` localized visual change (no semantic explanation) at A[55, 204, 101, 255]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference
+- `claim_048` localized visual change (no semantic explanation) at A[207, 104, 256, 135]. Evidence: appearance. nuisance explanation plausible: focus_blur_difference, local_displacement_explains_residual(misregistration or moved content)
+
+### Plausible nuisance factors (not established facts)
+- far_from_alignment_inliers
+- focus_blur_difference
+- local_displacement_explains_residual(misregistration or moved content)
+- vlm:blur
+
+_5 candidate(s) abstained. Scores are uncalibrated unless a calibrator was applied._",figures/SYSU-CD-row-127.png

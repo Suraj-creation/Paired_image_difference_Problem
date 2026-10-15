@@ -83,8 +83,8 @@ class Config:
     m3diff_timeout_s: int = 1800
 
     # ---- Stage F: learned localization ----
-    anychange_model_type: str = "vit_h"
-    anychange_sam_checkpoint: str = "checkpoints/sam_vit_h_4b8939.pth"
+    anychange_model_type: str = "vit_b"
+    anychange_sam_checkpoint: str = "checkpoints/sam_vit_b_01ec64.pth"
     anychange_max_side: int = 1024
     anychange_conf_threshold: float = 145.0   # upstream README default (angle, degrees)
 
@@ -105,7 +105,8 @@ PRESETS = {
     "ocr": dict(use_ocr=True, use_vlm=False, use_m3diff=False, use_anychange=False,
                 use_llm_report=False),
     "semantic": dict(use_ocr=False, use_vlm=True, use_anychange=False),
-    "full": dict(use_ocr=True, use_vlm=True),
+    "full": dict(use_ocr=True, use_vlm=True, use_anychange=True, use_compat_model=True,
+                 use_texture_features=True, matcher="lightglue", use_llm_report=True),
 }
 
 

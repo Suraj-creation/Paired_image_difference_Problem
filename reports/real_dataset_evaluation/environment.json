@@ -1,0 +1,10 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "opencv": "5.0.0",
+  "torch": "2.6.0+cu124",
+  "cuda_available": true,
+  "gpu": "NVIDIA RTX 4000 Ada Generation",
+  "vram_gb": 20.99,
+  "run_root": "/home/vsu/Image_Diff/Paired_image_difference_Problem/outputs/real_dataset_evaluation"
+}

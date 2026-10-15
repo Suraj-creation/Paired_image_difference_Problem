@@ -170,7 +170,8 @@ class Pipeline:
             if r:
                 anych = r[0]
                 add_anychange_obs(g, anych, r[1])
-            self.mm.release("anychange")
+            if not cfg.keep_models_loaded:
+                self.mm.release("anychange")
 
         # ---- D: M3Diff (own env; free this kernel's GPU first) ----
         m3 = None
@@ -268,7 +269,9 @@ class Pipeline:
 
         # masks for changed-pixel claims
         regions_by_obs = {r.get("obs_id"): r for r in (low or {}).get("regions", [])}
+        anychange_by_obs = {o.observation_id: o.raw for o in g.obs.values() if o.observation_type == "learned_change_mask"}
         for c in claims:
+            found = False
             for oid in c.supporting:
                 r = regions_by_obs.get(oid)
                 if r is None:
@@ -282,7 +285,14 @@ class Pipeline:
                     # the mask itself.  This avoids a systematic offset on large images.
                     ox, oy = r["mask_origin_analysis"]
                     art["masks"][c.claim_id] = (r["mask_analysis"], [ox / low["scale"], oy / low["scale"]], low["scale"])
+                found = True
                 break
+            if not found:
+                for oid in c.supporting:
+                    ac = anychange_by_obs.get(oid)
+                    if ac is not None and "mask_analysis" in ac and ac["mask_analysis"] is not None:
+                        art["masks"][c.claim_id] = (ac["mask_analysis"], [0, 0], ac.get("mask_scale", 1.0))
+                        break
 
         # ---- H: calibration ----
         cal_status = apply_calibrator(claims, cfg.calibrator_path)
@@ -347,7 +357,7 @@ def component_self_test(cfg: Config, run_m3diff=False):
     tests = []
     if cfg.use_compat_model or cfg.use_texture_features:
         tests.append(("dinov2", lambda: DinoAdapter(cfg.dino_model, dev), lambda ad: f"cosine(A,B)={ad.similarity(a, b):.3f}"))
-    for m in dict.fromkeys([cfg.matcher, "orb"]):
+    for m in dict.fromkeys([cfg.matcher, "loftr", "orb"]):
         fac = {"lightglue": lambda: AL.LightGlueMatcher(dev), "loftr": lambda: AL.LoFTRMatcher(dev), "orb": AL.ORBMatcher}[m]
         tests.append((f"matcher:{m}", fac, lambda ad: f"{len(ad.predict(a, b)[0])} matches"))
     if cfg.use_ocr:
