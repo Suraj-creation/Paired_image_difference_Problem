@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "pair_id": "illumination_only",
+  "inputs": {
+    "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/illumination_only_before.png",
+    "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/illumination_only_after.png"
+  },
+  "dimensions": {
+    "width": 448,
+    "height": 448
+  },
+  "analysis": {
+    "global_translation_estimate": {
+      "available": true,
+      "estimated_shift_xy_px": [
+        -0.0018161300711199146,
+        0.028261302516028763
+      ],
+      "phase_correlation_response": 0.9836636102723486,
+      "candidate": false,
+      "interpretation": "possible global camera/view translation; estimate is not a registration and may be affected by scene changes"
+    },
+    "raw_pixel": {
+      "method": "mean_absolute_rgb_difference",
+      "threshold": 0.08,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.9813855229591837,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 0,
+          "y0": 0,
+          "x1": 448,
+          "y1": 349,
+          "area": 134596
+        },
+        {
+          "x0": 0,
+          "y0": 352,
+          "x1": 448,
+          "y1": 448,
+          "area": 43008
+        },
+        {
+          "x0": 119,
+          "y0": 214,
+          "x1": 307,
+          "y1": 317,
+          "area": 19364
+        }
+      ]
+    },
+    "photometric_residual": {
+      "method": "robust_global_per_channel_affine_compensation",
+      "threshold": 0.035,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.0,
+      "candidate_change_present": false,
+      "regions_xyxy_half_open": [],
+      "estimated_transform": {
+        "gain_rgb": [
+          1.2083333730697632,
+          1.2137528657913208,
+          0.9494922757148743
+        ],
+        "bias_rgb_normalized": [
+          0.0008169934735633433,
+          0.0009552538977004588,
+          0.16594934463500977
+        ],
+        "transform_strength": 0.21343852579593658,
+        "interpretation": "global affine RGB fit; nuisance hypothesis only, may suppress real global changes"
+      },
+      "global_nuisance_suspected": true
+    }
+  },
+  "semantic_interpretation": {
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "raw_output": "{\n  \"status\": \"color_material\",\n  \"changes\": [\n    {\n      \"type\": \"color_material\",\n      \"entity\": \"background\",\n      \"before_state\": \"light beige\",\n      \"after_state\": \"white\",\n      \"changed_property\": \"color\",\n      \"spatial_description\": \"upper portion of the image\",\n      \"evidence\": \"The upper background area changes from light beige in the first image to white in the second.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"type\": \"color_material\",\n      \"entity\": \"foreground\",\n      \"before_state\": \"light beige\",\n      \"after_state\": \"light beige\",\n      \"changed_property\": \"color\",\n      \"spatial_description\": \"lower portion of the image\",\n      \"evidence\": \"The lower background area remains light beige in both images.\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"uncertainty\": null\n}",
+    "parsed": {
+      "status": "changed",
+      "changes": [
+        {
+          "type": "color_material",
+          "entity": "background",
+          "before_state": "light beige",
+          "after_state": "white",
+          "changed_property": "color",
+          "spatial_description": "upper portion of the image",
+          "evidence": "The upper background area changes from light beige in the first image to white in the second.",
+          "confidence": 0.95
+        },
+        {
+          "type": "color_material",
+          "entity": "foreground",
+          "before_state": "light beige",
+          "after_state": "light beige",
+          "changed_property": "color",
+          "spatial_description": "lower portion of the image",
+          "evidence": "The lower background area remains light beige in both images.",
+          "confidence": 0.95
+        }
+      ],
+      "uncertainty": null,
+      "model_status_normalized_from": "color_material",
+      "candidate_regions_xyxy_half_open": {
+        "raw_pixel": [
+          {
+            "x0": 0,
+            "y0": 0,
+            "x1": 448,
+            "y1": 349,
+            "area": 134596
+          },
+          {
+            "x0": 0,
+            "y0": 352,
+            "x1": 448,
+            "y1": 448,
+            "area": 43008
+          },
+          {
+            "x0": 119,
+            "y0": 214,
+            "x1": 307,
+            "y1": 317,
+            "area": 19364
+          }
+        ],
+        "photometric_residual": []
+      },
+      "region_claim_association_verified": false
+    },
+    "parse_valid": true,
+    "latency_seconds": 6.152884886992979,
+    "confidence_is_calibrated": false
+  },
+  "ocr_evidence": {
+    "engine": "EasyOCR local cached weights",
+    "before_text": null,
+    "after_text": null,
+    "normalized_before": null,
+    "normalized_after": null,
+    "text_change_candidate": false,
+    "similarity": null,
+    "before_detections": [],
+    "after_detections": [],
+    "interpretation": "OCR mismatch is a review cue, not proof of a semantic text change; OCR confidence is uncalibrated."
+  },
+  "pair_decision": {
+    "status": "uncertain",
+    "model_status": "changed",
+    "global_nuisance_suspected": true,
+    "review_required": true,
+    "review_reasons": [
+      "language claims and candidate regions have not been validated by a target-domain human study",
+      "language model reports change but no localized residual remains after broad photometric compensation"
+    ],
+    "policy": "escalate global-translation ambiguity, and escalate broad photometric change without localized residual support; preserve localized residual candidates"
+  },
+  "grounding": {
+    "association_status": "unverified: pixel regions are candidate evidence and are not proven to support each generated claim",
+    "review_required": true
+  },
+  "artifacts": {
+    "raw_mask": "mask_raw.png",
+    "photometric_residual_mask": "mask_photometric_residual.png",
+    "raw_overlay": "overlay_raw.png",
+    "photometric_residual_overlay": "overlay_photometric_residual.png",
+    "raw_difference": "difference_raw.png",
+    "photometric_residual": "difference_photometric_residual.png",
+    "pair_preview": "pair_preview.png"
+  },
+  "limitations": [
+    "Pixel differences are not semantic changes.",
+    "Photometric compensation can suppress genuine global color or illumination changes; raw evidence is retained.",
+    "No automatic image registration was performed; geometric alignment must be explicit.",
+    "Language-model confidence, if present, is not calibrated.",
+    "This output is a research aid and requires human review until validated on labeled target-domain data."
+  ],
+  "output_json": "/home/vsu/Image_Diff/fine_grained_difference_research/results/runs/qwen3vl_end_to_end/illumination_only/analysis.json"
+}

@@ -1,0 +1,76 @@
+{
+  "model": "Qwen/Qwen3-VL-4B-Instruct (cached local checkpoint)",
+  "checkpoint_path": "/home/vsu/.cache/huggingface/hub/models--Qwen--Qwen3-VL-4B-Instruct/snapshots/ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "license": "Apache-2.0 per official model card; base model terms remain applicable",
+  "mode": "zero-shot general VLM, not an image-difference specialist",
+  "prompt_policy": "Compare the two images in order: image one is BEFORE and image two is AFTER. Describe only the meaningful visual change, including before-to-after direction. Ignore lighting-only variation. If nothing meaningful changed, say so. Use one concise sentence and do not guess details that are not visible.",
+  "gpu": "NVIDIA RTX 4000 Ada Generation",
+  "peak_cuda_memory_bytes": 9008175616,
+  "cases": [
+    {
+      "case_id": "no_change",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/no_change_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/no_change_after.png",
+      "expected": "No depicted object or property changes.",
+      "prediction": "There is no meaningful visual change between the two images.",
+      "latency_seconds": 0.758322411988047
+    },
+    {
+      "case_id": "small_addition",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_addition_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_addition_after.png",
+      "expected": "A small yellow ball is added on the right.",
+      "prediction": "A small yellow circle appears to the right of the blue rectangle in the AFTER image, which is absent in the BEFORE image.",
+      "latency_seconds": 0.8449285899987444
+    },
+    {
+      "case_id": "small_removal_reversed",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_after.png",
+      "expected": "The small yellow ball is removed from the right.",
+      "prediction": "The yellow circle that was present to the right of the blue rectangle in the first image is absent in the second image.",
+      "latency_seconds": 0.8173070469929371
+    },
+    {
+      "case_id": "color_change",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/color_change_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/color_change_after.png",
+      "expected": "The large car-like object changes from blue to orange.",
+      "prediction": "The blue rectangle in the first image is replaced by an orange rectangle in the second image.",
+      "latency_seconds": 0.6397398260014597
+    },
+    {
+      "case_id": "movement",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_after.png",
+      "expected": "The green square moves from the left to the right.",
+      "prediction": "The green square moves from the left side to the right side of the upper portion.",
+      "latency_seconds": 0.6106926590000512
+    },
+    {
+      "case_id": "movement_reversed",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_after.png",
+      "expected": "The green square moves from the right to the left.",
+      "prediction": "The green square moves from the right side to the left side of the upper beige area.",
+      "latency_seconds": 0.6403322559926892
+    },
+    {
+      "case_id": "text_edit",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/text_edit_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/text_edit_after.png",
+      "expected": "The sign text changes from EXIT to EX1T.",
+      "prediction": "The AFTER image shows the letter 'T' added to the right of the word 'EXIT' within the box.",
+      "latency_seconds": 0.7878983550035628
+    },
+    {
+      "case_id": "illumination_only",
+      "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/illumination_only_before.png",
+      "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/illumination_only_after.png",
+      "expected": "No semantic change; the whole scene is brighter.",
+      "prediction": "The background color above the rectangle changes from light beige to white.",
+      "latency_seconds": 0.49210852599935606
+    }
+  ],
+  "scope": "small constructed qualitative diagnostic; not a benchmark or statistical evaluation"
+}

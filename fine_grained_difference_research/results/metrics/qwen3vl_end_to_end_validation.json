@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "pairs": 11,
+  "errors": [],
+  "warnings": [
+    "illumination_only: pair-level decision is abstained or unavailable",
+    "camera_translation_nuisance: pair-level decision is abstained or unavailable"
+  ]
+}

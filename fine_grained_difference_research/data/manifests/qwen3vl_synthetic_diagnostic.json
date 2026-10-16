@@ -1,0 +1,167 @@
+[
+  {
+    "pair_id": "no_change",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/no_change_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/no_change_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "no_change",
+    "change_present": false,
+    "truth_mask": "../synthetic_ground_truth_masks/no_change.png",
+    "change_records": [
+      {
+        "description": "No depicted object or property changes."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "small_addition",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/small_addition_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/small_addition_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "small_addition",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/small_addition.png",
+    "change_records": [
+      {
+        "description": "A small yellow ball is added on the right."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "small_removal_reversed",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "small_removal_reversed",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/small_removal_reversed.png",
+    "change_records": [
+      {
+        "description": "The small yellow ball is removed from the right."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "color_change",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/color_change_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/color_change_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "color_change",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/color_change.png",
+    "change_records": [
+      {
+        "description": "The large car-like object changes from blue to orange."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "movement",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/movement_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/movement_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "movement",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/movement.png",
+    "change_records": [
+      {
+        "description": "The green square moves from the left to the right."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "movement_reversed",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "movement_reversed",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/movement_reversed.png",
+    "change_records": [
+      {
+        "description": "The green square moves from the right to the left."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "text_edit",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/text_edit_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/text_edit_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "text_edit",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/text_edit.png",
+    "change_records": [
+      {
+        "description": "The sign text changes from EXIT to EX1T."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "illumination_only",
+    "before": "../../results/visualizations/qwen3vl_synthetic_pairs/illumination_only_before.png",
+    "after": "../../results/visualizations/qwen3vl_synthetic_pairs/illumination_only_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "illumination_only",
+    "change_present": false,
+    "truth_mask": "../synthetic_ground_truth_masks/illumination_only.png",
+    "change_records": [
+      {
+        "description": "No semantic change; the whole scene is brighter."
+      }
+    ],
+    "annotation_source": "constructed pair; exact rendered pixel difference; illumination-only labeled semantic no-change"
+  },
+  {
+    "pair_id": "multiple_changes",
+    "before": "../../results/visualizations/synthetic_hard_cases/multiple_changes_before.png",
+    "after": "../../results/visualizations/synthetic_hard_cases/multiple_changes_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "multiple_changes",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/multiple_changes.png",
+    "change_records": [
+      {
+        "description": "The rectangle changes from blue to orange and a small yellow circle is added."
+      }
+    ],
+    "annotation_source": "constructed controlled pair; hand-authored semantic label and pixel mask; nuisance-only regions intentionally excluded"
+  },
+  {
+    "pair_id": "addition_plus_illumination",
+    "before": "../../results/visualizations/synthetic_hard_cases/addition_plus_illumination_before.png",
+    "after": "../../results/visualizations/synthetic_hard_cases/addition_plus_illumination_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "addition_plus_illumination",
+    "change_present": true,
+    "truth_mask": "../synthetic_ground_truth_masks/addition_plus_illumination.png",
+    "change_records": [
+      {
+        "description": "A small yellow circle is added on the right while the whole image becomes brighter."
+      }
+    ],
+    "annotation_source": "constructed controlled pair; hand-authored semantic label and pixel mask; nuisance-only regions intentionally excluded"
+  },
+  {
+    "pair_id": "camera_translation_nuisance",
+    "before": "../../results/visualizations/synthetic_hard_cases/camera_translation_nuisance_before.png",
+    "after": "../../results/visualizations/synthetic_hard_cases/camera_translation_nuisance_after.png",
+    "split": "synthetic_diagnostic",
+    "group_id": "camera_translation_nuisance",
+    "change_present": false,
+    "truth_mask": "../synthetic_ground_truth_masks/camera_translation_nuisance.png",
+    "change_records": [
+      {
+        "description": "No depicted semantic change; the camera view shifts slightly."
+      }
+    ],
+    "annotation_source": "constructed controlled pair; hand-authored semantic label and pixel mask; nuisance-only regions intentionally excluded"
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "scope": "Researcher manual review of 11 constructed cases; not an independent human study or public benchmark.",
+  "reviewed_cases": 11,
+  "counts": {
+    "correct": 4,
+    "partially_correct": 3,
+    "incorrect": 4
+  },
+  "records": [
+    {
+      "pair_id": "no_change",
+      "review_label": "correct",
+      "review_note": "Correctly reports no meaningful change.",
+      "model_pair_status": "no_meaningful_change",
+      "system_pair_decision": "no_meaningful_change",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 0,
+      "review_required": true
+    },
+    {
+      "pair_id": "small_addition",
+      "review_label": "partially_correct",
+      "review_note": "Correctly identifies the added circle, but falsely claims the blue rectangle moved.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 1,
+      "review_required": true
+    },
+    {
+      "pair_id": "small_removal_reversed",
+      "review_label": "correct",
+      "review_note": "Correctly identifies removal in the reversed image order.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 1,
+      "review_required": true
+    },
+    {
+      "pair_id": "color_change",
+      "review_label": "correct",
+      "review_note": "Correctly identifies blue-to-orange change.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 1,
+      "review_required": true
+    },
+    {
+      "pair_id": "movement",
+      "review_label": "correct",
+      "review_note": "Correctly identifies left-to-right movement.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 2,
+      "review_required": true
+    },
+    {
+      "pair_id": "movement_reversed",
+      "review_label": "incorrect",
+      "review_note": "Gets horizontal direction partly right but hallucinates a vertical move from upper-right to lower-left.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 2,
+      "review_required": true
+    },
+    {
+      "pair_id": "text_edit",
+      "review_label": "incorrect",
+      "review_note": "Describes EXIT as removed and misses the intended EXIT-to-EX1T substitution. OCR also returns EXITI/EXIT and does not resolve the exact character.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": "EXITI",
+      "ocr_after": "EXIT",
+      "predicted_regions": 2,
+      "review_required": true
+    },
+    {
+      "pair_id": "illumination_only",
+      "review_label": "incorrect",
+      "review_note": "Calls broad brightening a background color change; final pair decision correctly abstains for review.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "uncertain",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 0,
+      "review_required": true
+    },
+    {
+      "pair_id": "multiple_changes",
+      "review_label": "partially_correct",
+      "review_note": "Finds two altered regions but calls the rectangle an addition instead of a blue-to-orange color change.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 2,
+      "review_required": true
+    },
+    {
+      "pair_id": "addition_plus_illumination",
+      "review_label": "partially_correct",
+      "review_note": "Finds the added circle, but also claims an unsupported background color change; final system retains the change because localized residual evidence remains.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "changed",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 1,
+      "review_required": true
+    },
+    {
+      "pair_id": "camera_translation_nuisance",
+      "review_label": "incorrect",
+      "review_note": "Calls a shifted bottom line an addition; global translation cue causes the final system to abstain, while the pixel mask still has false positives.",
+      "model_pair_status": "changed",
+      "system_pair_decision": "uncertain",
+      "ocr_before": null,
+      "ocr_after": null,
+      "predicted_regions": 2,
+      "review_required": true
+    }
+  ]
+}

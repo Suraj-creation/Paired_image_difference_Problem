@@ -1,0 +1,8 @@
+{
+  "method": "raw_rgb_mean_absolute_difference",
+  "pixel_threshold": 0.08,
+  "minimum_component_area": 1,
+  "connectivity": 8,
+  "coordinate_convention": "half-open xyxy in original image pixels",
+  "threshold_status": "demonstration only; must be selected on validation data"
+}

@@ -1,0 +1,157 @@
+{
+  "pair_presence": {
+    "n": 11,
+    "covered": 9,
+    "abstained": 2,
+    "coverage": 0.8181818181818182,
+    "selective_accuracy": 1.0,
+    "selective_error_rate": 0.0,
+    "covered_confusion_metrics": {
+      "n": 9,
+      "tp": 8,
+      "tn": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0
+    }
+  },
+  "localization_per_pair": [
+    {
+      "pair_id": "no_change",
+      "pixels": 200704,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "small_addition",
+      "pixels": 200704,
+      "tp": 1877,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "small_removal_reversed",
+      "pixels": 200704,
+      "tp": 1877,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "color_change",
+      "pixels": 200704,
+      "tp": 24648,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "movement",
+      "pixels": 200704,
+      "tp": 10082,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "movement_reversed",
+      "pixels": 200704,
+      "tp": 10082,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "text_edit",
+      "pixels": 200704,
+      "tp": 3193,
+      "fp": 0,
+      "fn": 133,
+      "precision": 1.0,
+      "recall": 0.960012026458208,
+      "iou": 0.960012026458208,
+      "dice": 0.9795980978677711
+    },
+    {
+      "pair_id": "illumination_only",
+      "pixels": 200704,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "multiple_changes",
+      "pixels": 200704,
+      "tp": 16222,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "addition_plus_illumination",
+      "pixels": 200704,
+      "tp": 1877,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "camera_translation_nuisance",
+      "pixels": 200704,
+      "tp": 0,
+      "fp": 6536,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "iou": 0.0,
+      "dice": 0.0
+    }
+  ],
+  "localization_macro": {
+    "precision": 0.9090909090909091,
+    "recall": 0.9054556387689281,
+    "iou": 0.9054556387689281,
+    "dice": 0.907236190715252
+  },
+  "localization_micro": {
+    "precision": 0.9144435426865984,
+    "recall": 0.9980997556828735,
+    "iou": 0.9128542867223333
+  },
+  "n_pairs": 11,
+  "n_pairs_with_masks": 11
+}

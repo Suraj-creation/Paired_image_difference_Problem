@@ -1,0 +1,22 @@
+{
+  "method": "raw_rgb_mean_absolute_difference",
+  "before": "results/visualizations/synthetic_before.png",
+  "after": "results/visualizations/synthetic_after.png",
+  "width": 64,
+  "height": 64,
+  "threshold": 0.08,
+  "min_area": 1,
+  "candidate_change_present": true,
+  "changed_pixel_fraction": 0.01025390625,
+  "mean_difference": 0.004128369968384504,
+  "regions_xyxy_half_open": [
+    {
+      "x0": 31,
+      "y0": 19,
+      "x1": 38,
+      "y1": 25,
+      "area": 42
+    }
+  ],
+  "interpretation_limit": "Pixel variation only; no semantic change or nuisance inference."
+}

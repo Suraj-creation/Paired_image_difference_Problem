@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "pair_id": "movement_reversed",
+  "inputs": {
+    "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_before.png",
+    "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_after.png"
+  },
+  "dimensions": {
+    "width": 448,
+    "height": 448
+  },
+  "analysis": {
+    "global_translation_estimate": {
+      "available": true,
+      "estimated_shift_xy_px": [
+        0.08326147228567038,
+        -0.004231157884305503
+      ],
+      "phase_correlation_response": 0.14090850634162808,
+      "candidate": false,
+      "interpretation": "possible global camera/view translation; estimate is not a registration and may be affected by scene changes"
+    },
+    "raw_pixel": {
+      "method": "mean_absolute_rgb_difference",
+      "threshold": 0.08,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.05023317920918367,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 90,
+          "y0": 225,
+          "x1": 161,
+          "y1": 296,
+          "area": 5041
+        },
+        {
+          "x0": 270,
+          "y0": 225,
+          "x1": 341,
+          "y1": 296,
+          "area": 5041
+        }
+      ]
+    },
+    "photometric_residual": {
+      "method": "robust_global_per_channel_affine_compensation",
+      "threshold": 0.035,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.05023317920918367,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 90,
+          "y0": 225,
+          "x1": 161,
+          "y1": 296,
+          "area": 5041
+        },
+        {
+          "x0": 270,
+          "y0": 225,
+          "x1": 341,
+          "y1": 296,
+          "area": 5041
+        }
+      ],
+      "estimated_transform": {
+        "gain_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bias_rgb_normalized": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "transform_strength": 0.0,
+        "interpretation": "global affine RGB fit; nuisance hypothesis only, may suppress real global changes"
+      },
+      "global_nuisance_suspected": false
+    }
+  },
+  "semantic_interpretation": {
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "raw_output": "{\n  \"status\": \"movement\",\n  \"changes\": [\n    {\n      \"type\": \"movement\",\n      \"entity\": \"green square\",\n      \"before_state\": \"visible in the right half of the upper area\",\n      \"after_state\": \"visible in the left half of the lower area\",\n      \"changed_property\": \"position\",\n      \"spatial_description\": \"from upper right to lower left\",\n      \"evidence\": \"The green square has moved from the upper right quadrant to the lower left quadrant of the image.\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"uncertainty\": null\n}",
+    "parsed": {
+      "status": "changed",
+      "changes": [
+        {
+          "type": "movement",
+          "entity": "green square",
+          "before_state": "visible in the right half of the upper area",
+          "after_state": "visible in the left half of the lower area",
+          "changed_property": "position",
+          "spatial_description": "from upper right to lower left",
+          "evidence": "The green square has moved from the upper right quadrant to the lower left quadrant of the image.",
+          "confidence": 0.95
+        }
+      ],
+      "uncertainty": null,
+      "model_status_normalized_from": "movement",
+      "candidate_regions_xyxy_half_open": {
+        "raw_pixel": [
+          {
+            "x0": 90,
+            "y0": 225,
+            "x1": 161,
+            "y1": 296,
+            "area": 5041
+          },
+          {
+            "x0": 270,
+            "y0": 225,
+            "x1": 341,
+            "y1": 296,
+            "area": 5041
+          }
+        ],
+        "photometric_residual": [
+          {
+            "x0": 90,
+            "y0": 225,
+            "x1": 161,
+            "y1": 296,
+            "area": 5041
+          },
+          {
+            "x0": 270,
+            "y0": 225,
+            "x1": 341,
+            "y1": 296,
+            "area": 5041
+          }
+        ]
+      },
+      "region_claim_association_verified": false
+    },
+    "parse_valid": true,
+    "latency_seconds": 4.0647462110064225,
+    "confidence_is_calibrated": false
+  },
+  "ocr_evidence": {
+    "engine": "EasyOCR local cached weights",
+    "before_text": null,
+    "after_text": null,
+    "normalized_before": null,
+    "normalized_after": null,
+    "text_change_candidate": false,
+    "similarity": null,
+    "before_detections": [],
+    "after_detections": [],
+    "interpretation": "OCR mismatch is a review cue, not proof of a semantic text change; OCR confidence is uncalibrated."
+  },
+  "pair_decision": {
+    "status": "changed",
+    "model_status": "changed",
+    "global_nuisance_suspected": false,
+    "review_required": true,
+    "review_reasons": [
+      "language claims and candidate regions have not been validated by a target-domain human study"
+    ],
+    "policy": "escalate global-translation ambiguity, and escalate broad photometric change without localized residual support; preserve localized residual candidates"
+  },
+  "grounding": {
+    "association_status": "unverified: pixel regions are candidate evidence and are not proven to support each generated claim",
+    "review_required": true
+  },
+  "artifacts": {
+    "raw_mask": "mask_raw.png",
+    "photometric_residual_mask": "mask_photometric_residual.png",
+    "raw_overlay": "overlay_raw.png",
+    "photometric_residual_overlay": "overlay_photometric_residual.png",
+    "raw_difference": "difference_raw.png",
+    "photometric_residual": "difference_photometric_residual.png",
+    "pair_preview": "pair_preview.png"
+  },
+  "limitations": [
+    "Pixel differences are not semantic changes.",
+    "Photometric compensation can suppress genuine global color or illumination changes; raw evidence is retained.",
+    "No automatic image registration was performed; geometric alignment must be explicit.",
+    "Language-model confidence, if present, is not calibrated.",
+    "This output is a research aid and requires human review until validated on labeled target-domain data."
+  ],
+  "output_json": "/home/vsu/Image_Diff/fine_grained_difference_research/results/runs/qwen3vl_end_to_end/movement_reversed/analysis.json"
+}
