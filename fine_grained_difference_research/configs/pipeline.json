@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "captioner": "qwen3vl",
+  "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+  "model_loading": "local_files_only",
+  "device": "cuda:0",
+  "raw_pixel_threshold": 0.08,
+  "minimum_component_area_pixels": 4,
+  "photometric_residual_threshold": "median + 4 * 1.4826 * MAD, clipped to [0.035, 0.25]",
+  "coordinates": "half-open xyxy in original image pixels",
+  "review_required": true,
+  "note": "Pixel regions are candidate evidence; model-to-region claim association is not verified."
+}

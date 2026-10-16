@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "pair_id": "text_edit",
+  "inputs": {
+    "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/text_edit_before.png",
+    "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/text_edit_after.png"
+  },
+  "dimensions": {
+    "width": 448,
+    "height": 448
+  },
+  "analysis": {
+    "global_translation_estimate": {
+      "available": true,
+      "estimated_shift_xy_px": [
+        0.059006346946745225,
+        0.004220145835773792
+      ],
+      "phase_correlation_response": 0.6635421385211709,
+      "candidate": false,
+      "interpretation": "possible global camera/view translation; estimate is not a registration and may be affected by scene changes"
+    },
+    "raw_pixel": {
+      "method": "mean_absolute_rgb_difference",
+      "threshold": 0.08,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.015679807079081634,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 256,
+          "y0": 221,
+          "x1": 310,
+          "y1": 276,
+          "area": 2212
+        },
+        {
+          "x0": 319,
+          "y0": 221,
+          "x1": 353,
+          "y1": 276,
+          "area": 935
+        }
+      ]
+    },
+    "photometric_residual": {
+      "method": "robust_global_per_channel_affine_compensation",
+      "threshold": 0.035,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.015909000318877552,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 256,
+          "y0": 221,
+          "x1": 311,
+          "y1": 276,
+          "area": 2258
+        },
+        {
+          "x0": 319,
+          "y0": 221,
+          "x1": 353,
+          "y1": 276,
+          "area": 935
+        }
+      ],
+      "estimated_transform": {
+        "gain_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bias_rgb_normalized": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "transform_strength": 0.0,
+        "interpretation": "global affine RGB fit; nuisance hypothesis only, may suppress real global changes"
+      },
+      "global_nuisance_suspected": false
+    }
+  },
+  "semantic_interpretation": {
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "raw_output": "{\n  \"status\": \"changed\",\n  \"changes\": [\n    {\n      \"type\": \"addition\",\n      \"entity\": \"text 'EXIT'\",\n      \"before_state\": \"visible\",\n      \"after_state\": \"visible\",\n      \"changed_property\": \"text content\",\n      \"spatial_description\": \"centered within a rectangular frame\",\n      \"evidence\": \"The word 'EXIT' is present in the first image but absent in the second.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"type\": \"removal\",\n      \"entity\": \"text 'EXIT'\",\n      \"before_state\": \"visible\",\n      \"after_state\": \"not visible\",\n      \"changed_property\": \"text content\",\n      \"spatial_description\": \"centered within a rectangular frame\",\n      \"evidence\": \"The word 'EXIT' is absent in the second image but present in the first.\",\n      \"confidence\": 0.95\n    }\n  ],\n  \"uncertainty\": null\n}",
+    "parsed": {
+      "status": "changed",
+      "changes": [
+        {
+          "type": "addition",
+          "entity": "text 'EXIT'",
+          "before_state": "visible",
+          "after_state": "visible",
+          "changed_property": "text content",
+          "spatial_description": "centered within a rectangular frame",
+          "evidence": "The word 'EXIT' is present in the first image but absent in the second.",
+          "confidence": 0.95
+        },
+        {
+          "type": "removal",
+          "entity": "text 'EXIT'",
+          "before_state": "visible",
+          "after_state": "not visible",
+          "changed_property": "text content",
+          "spatial_description": "centered within a rectangular frame",
+          "evidence": "The word 'EXIT' is absent in the second image but present in the first.",
+          "confidence": 0.95
+        }
+      ],
+      "uncertainty": null,
+      "candidate_regions_xyxy_half_open": {
+        "raw_pixel": [
+          {
+            "x0": 256,
+            "y0": 221,
+            "x1": 310,
+            "y1": 276,
+            "area": 2212
+          },
+          {
+            "x0": 319,
+            "y0": 221,
+            "x1": 353,
+            "y1": 276,
+            "area": 935
+          }
+        ],
+        "photometric_residual": [
+          {
+            "x0": 256,
+            "y0": 221,
+            "x1": 311,
+            "y1": 276,
+            "area": 2258
+          },
+          {
+            "x0": 319,
+            "y0": 221,
+            "x1": 353,
+            "y1": 276,
+            "area": 935
+          }
+        ]
+      },
+      "region_claim_association_verified": false
+    },
+    "parse_valid": true,
+    "latency_seconds": 6.4584558790083975,
+    "confidence_is_calibrated": false
+  },
+  "ocr_evidence": {
+    "engine": "EasyOCR local cached weights",
+    "before_text": "EXITI",
+    "after_text": "EXIT",
+    "normalized_before": "EXITI",
+    "normalized_after": "EXIT",
+    "text_change_candidate": true,
+    "similarity": 0.8888888888888888,
+    "before_detections": [
+      {
+        "text": "EXITI",
+        "confidence": 0.7520999962525949,
+        "bbox_xyxy_half_open": [
+          138,
+          210,
+          338,
+          288
+        ]
+      }
+    ],
+    "after_detections": [
+      {
+        "text": "EXIT",
+        "confidence": 0.8026731014251709,
+        "bbox_xyxy_half_open": [
+          137,
+          205,
+          357,
+          289
+        ]
+      }
+    ],
+    "interpretation": "OCR mismatch is a review cue, not proof of a semantic text change; OCR confidence is uncalibrated."
+  },
+  "pair_decision": {
+    "status": "changed",
+    "model_status": "changed",
+    "global_nuisance_suspected": false,
+    "review_required": true,
+    "review_reasons": [
+      "language claims and candidate regions have not been validated by a target-domain human study",
+      "OCR strings differ; inspect the text crop because exact OCR transcription may be wrong"
+    ],
+    "policy": "escalate global-translation ambiguity, and escalate broad photometric change without localized residual support; preserve localized residual candidates"
+  },
+  "grounding": {
+    "association_status": "unverified: pixel regions are candidate evidence and are not proven to support each generated claim",
+    "review_required": true
+  },
+  "artifacts": {
+    "raw_mask": "mask_raw.png",
+    "photometric_residual_mask": "mask_photometric_residual.png",
+    "raw_overlay": "overlay_raw.png",
+    "photometric_residual_overlay": "overlay_photometric_residual.png",
+    "raw_difference": "difference_raw.png",
+    "photometric_residual": "difference_photometric_residual.png",
+    "pair_preview": "pair_preview.png"
+  },
+  "limitations": [
+    "Pixel differences are not semantic changes.",
+    "Photometric compensation can suppress genuine global color or illumination changes; raw evidence is retained.",
+    "No automatic image registration was performed; geometric alignment must be explicit.",
+    "Language-model confidence, if present, is not calibrated.",
+    "This output is a research aid and requires human review until validated on labeled target-domain data."
+  ],
+  "output_json": "/home/vsu/Image_Diff/fine_grained_difference_research/results/runs/qwen3vl_end_to_end/text_edit/analysis.json"
+}

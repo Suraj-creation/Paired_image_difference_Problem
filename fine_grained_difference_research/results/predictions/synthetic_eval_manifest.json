@@ -1,0 +1,9 @@
+[
+  {
+    "pair_id": "synthetic-square",
+    "change_present": true,
+    "predicted_change_present": true,
+    "truth_mask": "../visualizations/synthetic_ground_truth_mask.png",
+    "predicted_mask": "synthetic_mask.png"
+  }
+]

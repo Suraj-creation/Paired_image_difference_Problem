@@ -1,0 +1,70 @@
+{
+  "scope": "Manual qualitative review of eight constructed pairs; not a benchmark or human study.",
+  "model": "Qwen/Qwen3-VL-4B-Instruct (cached local checkpoint)",
+  "gpu": "NVIDIA RTX 4000 Ada Generation",
+  "peak_vram_gib": 8.39,
+  "pairs_reviewed": 8,
+  "core_change_and_direction_correct": 6,
+  "qualitative_accuracy_fraction": 0.75,
+  "mean_generation_seconds_per_pair": 0.699,
+  "nuisance_only_case_correctly_ignored": false,
+  "exact_character_edit_correct": false,
+  "assessments": [
+    {
+      "case_id": "no_change",
+      "review": "correct",
+      "review_note": "Correctly abstains from describing a depicted change.",
+      "expected": "No depicted object or property changes.",
+      "prediction": "There is no meaningful visual change between the two images."
+    },
+    {
+      "case_id": "small_addition",
+      "review": "correct",
+      "review_note": "Identifies the new small yellow object and its position/direction.",
+      "expected": "A small yellow ball is added on the right.",
+      "prediction": "A small yellow circle appears to the right of the blue rectangle in the AFTER image, which is absent in the BEFORE image."
+    },
+    {
+      "case_id": "small_removal_reversed",
+      "review": "correct",
+      "review_note": "Identifies the object absent after the before-to-after comparison.",
+      "expected": "The small yellow ball is removed from the right.",
+      "prediction": "The yellow circle that was present to the right of the blue rectangle in the first image is absent in the second image."
+    },
+    {
+      "case_id": "color_change",
+      "review": "correct",
+      "review_note": "Identifies blue-to-orange color change with correct image order.",
+      "expected": "The large car-like object changes from blue to orange.",
+      "prediction": "The blue rectangle in the first image is replaced by an orange rectangle in the second image."
+    },
+    {
+      "case_id": "movement",
+      "review": "correct",
+      "review_note": "Identifies left-to-right movement.",
+      "expected": "The green square moves from the left to the right.",
+      "prediction": "The green square moves from the left side to the right side of the upper portion."
+    },
+    {
+      "case_id": "movement_reversed",
+      "review": "correct",
+      "review_note": "Identifies right-to-left movement after swapping the pair.",
+      "expected": "The green square moves from the right to the left.",
+      "prediction": "The green square moves from the right side to the left side of the upper beige area."
+    },
+    {
+      "case_id": "text_edit",
+      "review": "incorrect",
+      "review_note": "Misreads a one-character substitution as an extra character.",
+      "expected": "The sign text changes from EXIT to EX1T.",
+      "prediction": "The AFTER image shows the letter 'T' added to the right of the word 'EXIT' within the box."
+    },
+    {
+      "case_id": "illumination_only",
+      "review": "incorrect",
+      "review_note": "Reports a background color change instead of suppressing global brightness variation.",
+      "expected": "No semantic change; the whole scene is brighter.",
+      "prediction": "The background color above the rectangle changes from light beige to white."
+    }
+  ]
+}

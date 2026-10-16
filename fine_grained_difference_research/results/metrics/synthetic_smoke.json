@@ -1,0 +1,34 @@
+{
+  "scope": "constructed noiseless square only; not a real benchmark",
+  "pair_presence": {
+    "n": 1,
+    "tp": 1,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 0.0,
+    "f1": 1.0
+  },
+  "localization": {
+    "pixels": 4096,
+    "tp": 42,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "iou": 1.0,
+    "dice": 1.0
+  },
+  "regions_xyxy_half_open": [
+    {
+      "x0": 31,
+      "y0": 19,
+      "x1": 38,
+      "y1": 25,
+      "area": 42
+    }
+  ],
+  "method": "raw RGB mean absolute difference, threshold=0.08"
+}

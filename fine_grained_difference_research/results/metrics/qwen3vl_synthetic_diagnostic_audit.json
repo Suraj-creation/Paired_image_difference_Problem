@@ -1,0 +1,88 @@
+{
+  "pairs": 11,
+  "missing_files": [],
+  "exact_duplicate_groups": [
+    [
+      {
+        "pair_id": "no_change",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/no_change_before.png"
+      },
+      {
+        "pair_id": "no_change",
+        "field": "after",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/no_change_after.png"
+      }
+    ],
+    [
+      {
+        "pair_id": "small_addition",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_addition_before.png"
+      },
+      {
+        "pair_id": "small_removal_reversed",
+        "field": "after",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_after.png"
+      }
+    ],
+    [
+      {
+        "pair_id": "small_addition",
+        "field": "after",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_addition_after.png"
+      },
+      {
+        "pair_id": "small_removal_reversed",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_before.png"
+      }
+    ],
+    [
+      {
+        "pair_id": "movement",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_before.png"
+      },
+      {
+        "pair_id": "movement_reversed",
+        "field": "after",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_after.png"
+      }
+    ],
+    [
+      {
+        "pair_id": "movement",
+        "field": "after",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_after.png"
+      },
+      {
+        "pair_id": "movement_reversed",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/movement_reversed_before.png"
+      }
+    ],
+    [
+      {
+        "pair_id": "multiple_changes",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/synthetic_hard_cases/multiple_changes_before.png"
+      },
+      {
+        "pair_id": "addition_plus_illumination",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/synthetic_hard_cases/addition_plus_illumination_before.png"
+      },
+      {
+        "pair_id": "camera_translation_nuisance",
+        "field": "before",
+        "path": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/synthetic_hard_cases/camera_translation_nuisance_before.png"
+      }
+    ]
+  ],
+  "group_split_conflicts": [],
+  "invalid_rows": [],
+  "truth_mask_dimension_mismatches": [],
+  "valid": true,
+  "warning_count": 6
+}

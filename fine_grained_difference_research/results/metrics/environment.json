@@ -1,0 +1,29 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.2.6",
+    "Pillow": "12.3.0",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.6",
+    "opencv-python": "5.0.0.93",
+    "scipy": "1.18.1",
+    "huggingface-hub": "0.36.2"
+  },
+  "module_importability": {
+    "numpy": true,
+    "PIL": true,
+    "torch": true,
+    "transformers": true,
+    "cv2": true,
+    "scipy": true
+  },
+  "cuda": {
+    "available": true,
+    "device_name": "NVIDIA RTX 4000 Ada Generation",
+    "device_total_memory_gib": 19.55
+  },
+  "qwen3_vl_cached": true,
+  "qwen3_vl_cache_path": "/home/vsu/.cache/huggingface/hub/models--Qwen--Qwen3-VL-4B-Instruct/snapshots/ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "network_or_install_attempted": false
+}

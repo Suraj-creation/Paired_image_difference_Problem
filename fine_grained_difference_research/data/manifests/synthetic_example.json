@@ -1,0 +1,9 @@
+[
+  {
+    "pair_id": "synthetic-square",
+    "before": "../../results/visualizations/synthetic_before.png",
+    "after": "../../results/visualizations/synthetic_after.png",
+    "split": "demo",
+    "group_id": "generated-scene"
+  }
+]
