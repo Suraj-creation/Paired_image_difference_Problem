@@ -9,6 +9,7 @@ An independent research workspace for understanding what changed between two ima
 - The baseline and metric integrity checks have been run on deterministic synthetic examples, including an illumination nuisance failure case. These are diagnostics, not benchmark evidence.
 - An end-to-end pipeline now emits ordered-pair descriptions, raw and photometric-residual masks, component boxes, visual artifacts, OCR cross-checks, review decisions, and JSON manifests.
 - The 11-pair constructed diagnostic ran with cached Qwen3-VL and EasyOCR weights. The final selective pair decision covered 9/11 pairs and was correct on those covered examples; it abstained on the illumination-only and camera-translation cases. Manual claim review found 4 fully correct, 3 partially correct, and 4 incorrect descriptions. This is a small synthetic check, not benchmark evidence.
+- On the same 11 masks, the raw RGB reference scored 0.723 macro / 0.148 micro IoU; the photometric-residual candidate mask scored 0.905 / 0.913. The difference is concentrated in the constructed illumination cases; both masks score 0.000 IoU on camera translation. See `reports/final_research_report.md` and `results/metrics/raw_rgb_baseline_11pair.json`.
 - The shared environment and caches were reused. No packages or weights were installed or downloaded. No public benchmark or specialist IDC checkpoint was downloaded. See `research/limitations.md`.
 
 ## Quick start
@@ -57,6 +58,7 @@ The raw comparison script reports pixel variation and connected regions only. Th
 - `tests/`: deterministic metric and baseline checks.
 - `results/runs/qwen3vl_end_to_end/`: full pair outputs, masks, overlays, run metadata and prediction manifest.
 - `results/metrics/qwen3vl_end_to_end_synthetic.json`: pair/selective and localization metrics. `qwen3vl_end_to_end_manual_review.json` records the bounded claim review.
+- `results/metrics/raw_rgb_baseline_11pair.json`: raw pixel-reference results on the same 11 constructed pairs.
 - `results/visualizations/end_to_end_failure_gallery.png`: selected real outputs, masks and failure notes from the constructed diagnostic.
 
 ## Result interpretation

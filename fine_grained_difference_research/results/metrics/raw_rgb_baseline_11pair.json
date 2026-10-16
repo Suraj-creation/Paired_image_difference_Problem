@@ -1,0 +1,147 @@
+{
+  "pair_presence": {
+    "n": 11,
+    "covered": 0,
+    "abstained": 11,
+    "coverage": 0.0,
+    "selective_accuracy": null,
+    "selective_error_rate": null,
+    "covered_confusion_metrics": null
+  },
+  "localization_per_pair": [
+    {
+      "pair_id": "no_change",
+      "pixels": 200704,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "small_addition",
+      "pixels": 200704,
+      "tp": 1877,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "small_removal_reversed",
+      "pixels": 200704,
+      "tp": 1877,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "color_change",
+      "pixels": 200704,
+      "tp": 24648,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "movement",
+      "pixels": 200704,
+      "tp": 10082,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "movement_reversed",
+      "pixels": 200704,
+      "tp": 10082,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "text_edit",
+      "pixels": 200704,
+      "tp": 3147,
+      "fp": 0,
+      "fn": 179,
+      "precision": 1.0,
+      "recall": 0.9461815995189417,
+      "iou": 0.9461815995189417,
+      "dice": 0.9723466707863433
+    },
+    {
+      "pair_id": "illumination_only",
+      "pixels": 200704,
+      "tp": 0,
+      "fp": 196968,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "iou": 0.0,
+      "dice": 0.0
+    },
+    {
+      "pair_id": "multiple_changes",
+      "pixels": 200704,
+      "tp": 16222,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "iou": 1.0,
+      "dice": 1.0
+    },
+    {
+      "pair_id": "addition_plus_illumination",
+      "pixels": 200704,
+      "tp": 1877,
+      "fp": 197483,
+      "fn": 0,
+      "precision": 0.009415128410914927,
+      "recall": 1.0,
+      "iou": 0.009415128410914927,
+      "dice": 0.018654621168075453
+    },
+    {
+      "pair_id": "camera_translation_nuisance",
+      "pixels": 200704,
+      "tp": 0,
+      "fp": 6536,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "iou": 0.0,
+      "dice": 0.0
+    }
+  ],
+  "localization_macro": {
+    "precision": 0.7281286480373559,
+    "recall": 0.8132892363199038,
+    "iou": 0.7232360661754416,
+    "dice": 0.7264546629049472
+  },
+  "localization_micro": {
+    "precision": 0.14828408726441644,
+    "recall": 0.9974425283250704,
+    "iou": 0.14822773038231085
+  },
+  "n_pairs": 11,
+  "n_pairs_with_masks": 11
+}
