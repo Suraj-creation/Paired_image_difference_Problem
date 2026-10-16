@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-10-16T05:30:05.763463+00:00",
+  "pair_count": 11,
+  "captioner": "none",
+  "model_id": null,
+  "ocr": "none",
+  "mask_source": "raw",
+  "raw_threshold": 0.08,
+  "minimum_component_area": 4,
+  "mean_caption_latency_seconds": null,
+  "total_elapsed_seconds": 3.223383720993297,
+  "resources": {
+    "device": "CPU"
+  },
+  "network_or_package_install_attempted": false,
+  "data_scope": "constructed diagnostic pairs only; not a public benchmark"
+}

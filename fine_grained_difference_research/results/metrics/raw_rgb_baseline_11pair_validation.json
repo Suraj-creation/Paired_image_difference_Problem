@@ -1,0 +1,29 @@
+{
+  "valid": true,
+  "pairs": 11,
+  "errors": [],
+  "warnings": [
+    "no_change: no semantic model output; only pixel evidence is available",
+    "no_change: pair-level decision is abstained or unavailable",
+    "small_addition: no semantic model output; only pixel evidence is available",
+    "small_addition: pair-level decision is abstained or unavailable",
+    "small_removal_reversed: no semantic model output; only pixel evidence is available",
+    "small_removal_reversed: pair-level decision is abstained or unavailable",
+    "color_change: no semantic model output; only pixel evidence is available",
+    "color_change: pair-level decision is abstained or unavailable",
+    "movement: no semantic model output; only pixel evidence is available",
+    "movement: pair-level decision is abstained or unavailable",
+    "movement_reversed: no semantic model output; only pixel evidence is available",
+    "movement_reversed: pair-level decision is abstained or unavailable",
+    "text_edit: no semantic model output; only pixel evidence is available",
+    "text_edit: pair-level decision is abstained or unavailable",
+    "illumination_only: no semantic model output; only pixel evidence is available",
+    "illumination_only: pair-level decision is abstained or unavailable",
+    "multiple_changes: no semantic model output; only pixel evidence is available",
+    "multiple_changes: pair-level decision is abstained or unavailable",
+    "addition_plus_illumination: no semantic model output; only pixel evidence is available",
+    "addition_plus_illumination: pair-level decision is abstained or unavailable",
+    "camera_translation_nuisance: no semantic model output; only pixel evidence is available",
+    "camera_translation_nuisance: pair-level decision is abstained or unavailable"
+  ]
+}

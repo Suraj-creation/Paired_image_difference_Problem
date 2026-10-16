@@ -9,6 +9,7 @@
 - Ran deterministic synthetic checks for exact mask scoring and baseline mechanics, plus a nuisance stress case showing the raw-difference baseline's global-brightness failure.
 - Implemented an end-to-end single-pair and manifest pipeline with raw and robust global-photometric residual maps, connected-region boxes, phase-correlation translation cues, optional cached Qwen3-VL description, optional local-only EasyOCR comparison, uncertainty/review decisions, artifact validation, and selective pair/mask evaluation.
 - Ran 13 unit tests and an 11-pair constructed diagnostic on the RTX 4000 Ada. The run used 8.44 GiB peak Qwen VRAM and averaged 4.90 seconds of generation per pair. On the synthetic labels, the system covered 9/11 pair decisions with 100% accuracy on covered cases and abstained on two nuisance cases. Localization macro IoU was 0.905; camera translation was a clear false-positive localization failure. Manual review of semantic claims: 4 correct, 3 partial, 4 incorrect.
+- Evaluated the raw RGB reference on the same 11 pairs: macro/micro IoU were 0.723/0.148, compared with 0.905/0.913 for the photometric-residual masks. Both approaches scored 0.000 IoU on camera translation. The result report documents the pair-level and case-specific comparison.
 
 ## Not completed
 

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "pair_id": "small_removal_reversed",
+  "inputs": {
+    "before": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_before.png",
+    "after": "/home/vsu/Image_Diff/fine_grained_difference_research/results/visualizations/qwen3vl_synthetic_pairs/small_removal_reversed_after.png"
+  },
+  "dimensions": {
+    "width": 448,
+    "height": 448
+  },
+  "analysis": {
+    "global_translation_estimate": {
+      "available": true,
+      "estimated_shift_xy_px": [
+        -0.0011738513670707107,
+        -0.003079217911277965
+      ],
+      "phase_correlation_response": 0.28847233916859566,
+      "candidate": false,
+      "interpretation": "possible global camera/view translation; estimate is not a registration and may be affected by scene changes"
+    },
+    "raw_pixel": {
+      "method": "mean_absolute_rgb_difference",
+      "threshold": 0.08,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.009352080676020409,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 303,
+          "y0": 223,
+          "x1": 352,
+          "y1": 272,
+          "area": 1877
+        }
+      ]
+    },
+    "photometric_residual": {
+      "method": "robust_global_per_channel_affine_compensation",
+      "threshold": 0.035,
+      "min_component_area": 4,
+      "changed_pixel_fraction": 0.009352080676020409,
+      "candidate_change_present": true,
+      "regions_xyxy_half_open": [
+        {
+          "x0": 303,
+          "y0": 223,
+          "x1": 352,
+          "y1": 272,
+          "area": 1877
+        }
+      ],
+      "estimated_transform": {
+        "gain_rgb": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bias_rgb_normalized": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "transform_strength": 0.0,
+        "interpretation": "global affine RGB fit; nuisance hypothesis only, may suppress real global changes"
+      },
+      "global_nuisance_suspected": false
+    }
+  },
+  "semantic_interpretation": null,
+  "ocr_evidence": null,
+  "pair_decision": {
+    "status": "uncertain",
+    "model_status": null,
+    "global_nuisance_suspected": false,
+    "review_required": true,
+    "review_reasons": [
+      "language claims and candidate regions have not been validated by a target-domain human study",
+      "language-model output is unavailable, incomplete, or uncertain"
+    ],
+    "policy": "escalate global-translation ambiguity, and escalate broad photometric change without localized residual support; preserve localized residual candidates"
+  },
+  "grounding": {
+    "association_status": "unverified: pixel regions are candidate evidence and are not proven to support each generated claim",
+    "review_required": true
+  },
+  "artifacts": {
+    "raw_mask": "mask_raw.png",
+    "photometric_residual_mask": "mask_photometric_residual.png",
+    "raw_overlay": "overlay_raw.png",
+    "photometric_residual_overlay": "overlay_photometric_residual.png",
+    "raw_difference": "difference_raw.png",
+    "photometric_residual": "difference_photometric_residual.png",
+    "pair_preview": "pair_preview.png"
+  },
+  "limitations": [
+    "Pixel differences are not semantic changes.",
+    "Photometric compensation can suppress genuine global color or illumination changes; raw evidence is retained.",
+    "No automatic image registration was performed; geometric alignment must be explicit.",
+    "Language-model confidence, if present, is not calibrated.",
+    "This output is a research aid and requires human review until validated on labeled target-domain data."
+  ],
+  "output_json": "/home/vsu/Image_Diff/fine_grained_difference_research/results/runs/raw_rgb_baseline_11pair/small_removal_reversed/analysis.json"
+}
